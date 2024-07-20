@@ -235,7 +235,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  /* background-image: url('./assets/img/color-sharp.png'); */
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -287,6 +287,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner img {
   animation: updown 3s linear infinite;
 }
+.background-image-left {
+  top: 10%;
+  position: absolute;
+  object-fit: cover;
+  z-index: -4;
+}
+
+
 @keyframes updown {
     0% {
         transform: translateY(-20px);
@@ -300,4 +308,156 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+}
+
+/************ MySkill Css ************/
+
+:root {
+  --main-black: #000000;
+  --light-black: #333333;
+  --accent-color: #c35bbf;
+  --text-white: #ffffff;
+  --bg-dark: rgba(26, 26, 26, 0.9);
+  --bg-lighter: rgba(42, 42, 42, 0.9);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+}
+
+.tech-tools {
+  padding: 80px 0;
+  position: relative;
+  overflow: visible;
+  color: var(--text-white);
+}
+
+.tech-tools::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.tech-tools-bx {
+  background: var(--glass-bg);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-tools h1 {
+  color: var(--text-white);
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.tech-tools p {
+  color: #B8B8B8;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.tech-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  justify-items: center; /* Center items horizontally */
+  gap: 20px;             /* Add space between items */
+  min-height: 40vh;      /* Ensure the container takes full viewport height */
+}
+
+.tech-tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--light-black);
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;            /* Ensure proper spacing */
+  max-width: 120px;        /* Adjust as needed */
+}
+
+.tech-tool-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tech-tool-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.tech-tool-item span {
+  font-size: 14px;
+  color: var(--text-white);
+}
+
+.skill-level {
+  font-size: 12px;
+  color: var(--accent-color);
+  margin-top: 5px;
+}
+
+.nav-tabs {
+  border-bottom: none;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-tabs .nav-link {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  background-color: transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--accent-color);
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--accent-color);
+  background-color: transparent;
+  border-bottom: 4px solid var(--accent-color); /* Increased border thickness */
+  border-radius: 2px; /* Rounded edges */
+  transition: border-bottom 0.3s ease, border-radius 0.3s ease; /* Smooth transition for changes */
+}
+
+
+
+@media (max-width: 768px) {
+  .tech-tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .tech-tool-item {
+    padding: 10px;
+  }
+
+  .tech-tool-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tech-tool-item span {
+    font-size: 12px;
+  }
+
+  .skill-level {
+    font-size: 10px;
+  }
 }

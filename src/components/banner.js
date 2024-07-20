@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
+import colorSharp from "../assets/img/color-sharp.png";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -10,7 +11,7 @@ export const Banner = () => {
   const [delta, setDelta] = useState(100 - Math.random() * 100);
   const [index, setIndex] = useState(1);
   const period = 2000;
-  const toRotate = ["Web Developer", "UI/UX Designer", "BackEnd Developer"];
+  const toRotate = ["Web Development", "UI/UX Design", "BackEnd Development", "DB Development"];
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -61,14 +62,14 @@ export const Banner = () => {
       <Container>
         <Row class="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Hi! Welcome to my portfolio</span>
-            <h1>{"Hi! I'm Kelvin"} </h1>
+            <span className="tagline">Welcome to my portfolio</span>
+            <h1>{"Hi! I'm Kelvin Lie"} </h1>
             <Row>
               <h1>
                 <span
                   className="txt-rotate"
                   dataPeriod="1000"
-                  data-rotate='[ "Web Developer", "BackEnd Developer", "UI/UX Designer" ]'
+                  data-rotate='[ "Web Development", "BackEnd Development", "UI/UX Design", "DB Development]'
                 >
                   <span className="wrap">{text}</span>
                 </span>
@@ -93,6 +94,7 @@ export const Banner = () => {
           </Col>
         </Row>
       </Container>
+      <img className="background-image-left" src={colorSharp} alt="background"/>
     </section>
   );
 };
