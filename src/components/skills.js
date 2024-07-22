@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
-// import colorSharp from "../assets/img/color-sharp.png";
 import jsLogo from '../assets/img/jslogo.png';
 import mySqlLogo from '../assets/img/5968363.png';
 import laravelLogo from '../assets/img/Laravel.svg.png';

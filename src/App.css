@@ -22,6 +22,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-black: #000000;
+  --light-black: #333333;
+  --accent-color: #c35bbf;
+  --text-white: #eeeeee;
+  --text-p-white: #b8b8b8;
+  --bg-dark: rgba(26, 26, 26, 0.9);
+  --bg-lighter: rgba(42, 42, 42, 0.9);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
@@ -288,12 +299,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   animation: updown 3s linear infinite;
 }
 .background-image-left {
-  top: 10%;
+  top: 1%;
   position: absolute;
   object-fit: cover;
   z-index: -4;
 }
-
+.background-image-right {
+  top: 30%;
+  position: absolute;
+  object-fit: cover;
+  z-index: -4;
+  overflow: hidden;
+  transform: rotate(180deg); 
+}
 
 @keyframes updown {
     0% {
@@ -312,15 +330,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ MySkill Css ************/
 
-:root {
-  --main-black: #000000;
-  --light-black: #333333;
-  --accent-color: #c35bbf;
-  --text-white: #ffffff;
-  --bg-dark: rgba(26, 26, 26, 0.9);
-  --bg-lighter: rgba(42, 42, 42, 0.9);
-  --glass-bg: rgba(255, 255, 255, 0.03);
-}
 
 .tech-tools {
   padding: 80px 0;
@@ -343,6 +352,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: var(--glass-bg);
   border-radius: 10px;
   padding: 30px;
+  margin-top: 50px ;
+  margin-bottom: 50px ;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
@@ -379,7 +390,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: var(--light-black);
+  background-color: var(--glass-bg);
   padding: 15px;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -389,7 +400,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .tech-tool-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(28, 28, 28, 0.35);
 }
 
 .tech-tool-item img {
@@ -461,3 +472,126 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 10px;
   }
 }
+
+
+/************ Projects Css ************/
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-project {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(29, 29, 29, 0.037);
+}
+
+.card-image {
+  height: 150px;
+  background-size: cover; /* Cover the entire div */
+  background-position: center; /* Center the background image */
+  border-radius: 10px; /* Apply rounded corners */
+  overflow: hidden; /* Ensure that overflow content is clipped */
+  transition: transform 0.3s ease;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-white) !important;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #B8B8B8 !important;
+  text-align: left !important;
+}
+
+.projects-section {
+  padding: 50px 0;
+}
+
+.projects-section p {
+  color: var(--text-p-white);
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-white);
+  font-size: 32px;
+}
+
+.button-more button {
+  font-weight: 100;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  margin-left: 0px;
+	position: relative;
+	background-color: transparent;
+	transition: 0.3s ease-in-out;
+}
+.button-text button {
+  font-weight: 100;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 18px 34px;
+  font-size: 18px;
+  margin-left: 18px;
+	position: relative;
+	background-color: transparent;
+	transition: 0.3s ease-in-out;
+}
+
+.button-more button span {
+  z-index: 1;
+}
+.button-more button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.button-more button:hover {
+  color: #121212;
+}
+.button-more button:hover::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+/* FooterLink */
