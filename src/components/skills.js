@@ -55,7 +55,7 @@ export const Skills = () => {
           <h1>Tech Stack & Tools</h1>
           <p>There are some tech stack and tools that I've learned and experienced</p>
             <div className="tech-tools-bx"> 
-              <Nav variant="tabs" className="justify-content-center mb-3">
+              <Nav variant="tabs" className="justify-content-center mb-4">
                 <Nav.Item>
                   <Nav.Link 
                     active={activeTab === 'tech'} 

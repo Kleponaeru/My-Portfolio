@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
+import { CloudDownload, CloudDownloadFill, Download } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 import colorSharp from "../assets/img/color-sharp.png";
 
@@ -85,8 +85,8 @@ export const Banner = () => {
                 eager to contribute to innovative tech projects.
               </p>
             </Row>
-            <button onClick={() => console.log("connect")}>
-              Let's Connect <ArrowRightCircle size={25} />
+            <button classname="cv" onClick={() => console.log("connect")}>
+              <u>See more in CV</u> <CloudDownloadFill size={25} />
             </button>
           </Col>
           <Col xs={12} md={6} xl={5}>

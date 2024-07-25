@@ -81,9 +81,9 @@ export const NavBar = () => {
                 <img src={navIcon4} alt="" />
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
+            {/* <button className="vvd" onClick={() => console.log("connect")}>
               <span>Let's Connect</span>
-            </button>
+            </button> */}
           </span>
         </Navbar.Collapse>
       </Container>

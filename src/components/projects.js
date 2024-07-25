@@ -37,8 +37,9 @@ export const Projects = () => {
   return (
     <span className="button-more">
     <section className="projects-section" id="projects">
-      <h2>My Projects</h2>
-      <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+      <h1>My Projects</h1>
+      <p>Welcome to the showcase of my digital craftsmanship. 
+        <br></br>Each project here represents a unique challenge I've embraced, a problem I've solved, and a story of growth.</p>
       <div className="card-container">
         {projectData.map((project, index) => (
           <Card key={index} className="card-project">
