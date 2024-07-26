@@ -57,6 +57,17 @@ export const Banner = () => {
     setIndex((prevIndex) => (prevIndex + 1) % toRotate.length);
   };
 
+  const handleDownload = () => {
+    const pdfUrl = `${process.env.PUBLIC_URL}/Kelvin Lie-resume.pdf`;
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'Kelvin Lie - CV.pdf'; // The name the file will be downloaded as
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -85,7 +96,7 @@ export const Banner = () => {
                 eager to contribute to innovative tech projects.
               </p>
             </Row>
-            <button classname="cv" onClick={() => console.log("connect")}>
+            <button classname="cv" onClick={() => handleDownload()}>
               <u>See more in CV</u> <CloudDownloadFill size={25} />
             </button>
           </Col>

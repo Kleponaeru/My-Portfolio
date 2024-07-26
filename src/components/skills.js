@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
+import useScrollAnimation from '../components/useScrollAnimation';
 import jsLogo from '../assets/img/jslogo.png';
 import mySqlLogo from '../assets/img/5968363.png';
 import laravelLogo from '../assets/img/Laravel.svg.png';
@@ -21,12 +22,13 @@ import androidStdLogo from '../assets/img/andr-studio.png';
 
 export const Skills = () => {
   const [activeTab, setActiveTab] = useState('tech');
+  const animationRef = useScrollAnimation();
 
   const techItems = [
     { name: 'Laravel', icon: laravelLogo, level: 'Advanced' },
     { name: 'C#', icon: csharpLogo, level: 'Advanced' },
     { name: 'JavaScript', icon: jsLogo, level: 'Intermediate' },
-    { name: 'React JS', icon: reactLogo, level: 'Advanced' },
+    { name: 'React JS', icon: reactLogo, level: 'Intermediate' },
     { name: 'MySQL', icon: mySqlLogo, level: 'Advanced' },
     { name: 'PHP', icon: phpLogo, level: 'Advanced' },
     { name: 'Bootstrap', icon: bootstrapLogo, level: 'Advanced' },
@@ -34,21 +36,21 @@ export const Skills = () => {
     { name: 'Python', icon: pythonLogo, level: 'Advanced' },
     { name: 'C++', icon: cplusLogo, level: 'Advanced' },
     { name: 'HTML', icon: htmlLogo, level: 'Advanced' },
-    { name: 'CSS', icon: cssLogo, level: 'Advanced' },
+    { name: 'CSS', icon: cssLogo, level: 'Intermediate' },
   ];
 
   const toolItems = [
     { name: 'VS Code', icon: vsCodeLogo, level: 'Advanced' },
     { name: 'Git', icon: gitLogo, level: 'Intermediate' },
-    { name: 'GitHub', icon: gitHubLogo, level: 'Intermediate' },
+    { name: 'GitHub', icon: gitHubLogo, level: 'Advanced' },
     { name: 'XAMPP', icon: xamppLogo, level: 'Advanced' },
-    { name: 'Figma', icon: figmaLogo, level: 'Intermediate' },
+    { name: 'Figma', icon: figmaLogo, level: 'Advanced' },
     { name: 'Android Studio', icon: androidStdLogo, level: 'Intermediate' },
     // Add more tool items...
   ];
 
   return (
-    <section className="tech-tools" id="skills">
+    <section className="tech-tools" id="skills" ref={animationRef} style={{ opacity: 0, transform: 'translateY(30px)'}}>
       <Container>
         <Row className="justify-content-center">
           <Col xs={12} md={10} lg={8}>
