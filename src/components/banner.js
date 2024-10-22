@@ -91,8 +91,8 @@ export const Banner = () => {
                 Undergraduate Information Systems student at{" "}
                 <b>Universitas Kristen Duta Wacana</b>, I'm passionate about{" "}
                 <b>Web Development, BackEnd, Databases and UI/UX Designer</b>.
-                I'm also a UI/UX Apprentice at MyEduSolve and a PKM-PM Funding
-                Awardee from DIKTI. I thrive on creative problem-solving and am
+                I'm also a <b>UI/UX Apprentice</b> at MyEduSolve and a <b>PKM-PM Funding
+                Awardee from DIKTI.</b> I thrive on creative problem-solving and am
                 eager to contribute to innovative tech projects.
               </p>
             </Row>
