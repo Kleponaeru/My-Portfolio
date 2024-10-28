@@ -11,7 +11,7 @@ export const Banner = () => {
   const [delta, setDelta] = useState(100 - Math.random() * 100);
   const [index, setIndex] = useState(1);
   const period = 2000;
-  const toRotate = ["Web Development", "UI/UX Design", "BackEnd Development", "DB Development"];
+  const toRotate = ["Web Developer", "UI/UX Design", "BackEnd Developer", "DB Developer"];
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -80,7 +80,7 @@ export const Banner = () => {
                 <span
                   className="txt-rotate"
                   dataPeriod="1000"
-                  data-rotate='[ "Web Development", "BackEnd Development", "UI/UX Design", "DB Development]'
+                  data-rotate='[ "Web Developer", "BackEnd Developer", "UI/UX Design", "DB Developer"]'
                 >
                   <span className="wrap">{text}</span>
                 </span>
@@ -90,7 +90,7 @@ export const Banner = () => {
               <p>
                 Undergraduate Information Systems student at{" "}
                 <b>Universitas Kristen Duta Wacana</b>, I'm passionate about{" "}
-                <b>Web Development, BackEnd, Databases and UI/UX Designer</b>.
+                <b>Web Developer, BackEnd, Databases and UI/UX Designer</b>.
                 I'm also a <b>UI/UX Apprentice</b> at MyEduSolve and a <b>PKM-PM Funding
                 Awardee from DIKTI.</b> I thrive on creative problem-solving and am
                 eager to contribute to innovative tech projects.
