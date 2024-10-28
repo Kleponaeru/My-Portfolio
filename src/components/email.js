@@ -55,10 +55,7 @@ export const Email = () => {
         {/* Contact Form Column */}
         <MDBCol lg="6" className="mb-4">
           <h2 className="mb-4">
-            Get in touch{" "}
-            <h5>
-              <i>(Still on Development)</i>
-            </h5>
+            <h5>Get in touch</h5>
           </h2>
           <form onSubmit={handleSubmit}>
             <MDBRow className="mb-4">
