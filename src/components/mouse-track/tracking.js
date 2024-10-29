@@ -22,7 +22,7 @@ const CursorFollower = ({ includeTouch }) => {
       <div
         style={{
           ...baseStyle,
-          backgroundColor: "#7E00CC", // Main circle color
+          backgroundColor: "#FFFFFF", // Main circle color
           boxShadow: `
           0 0 20px rgba(255, 255, 255, 0.6),
           0 0 30px rgba(155, 89, 182, 0.8),  
@@ -36,7 +36,7 @@ const CursorFollower = ({ includeTouch }) => {
           key={i}
           style={{
             ...baseStyle,
-            backgroundColor: "#7E00CC",
+            backgroundColor: "#FFFFFF",
             opacity: 0.5 - i * 0.1,
             transition: `all ${0.1 + i * 0.05}s ease-out`,
             transform: `translate(-50%, -50%) scale(${1 - i * 0.1})`,
