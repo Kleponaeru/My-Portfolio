@@ -748,3 +748,7 @@ button:hover {
   content: "*";
   color: red;
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

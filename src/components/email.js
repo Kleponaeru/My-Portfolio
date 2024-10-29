@@ -16,37 +16,43 @@ export const Email = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const templateParams = {
-      subject,
-      user_email: email,
-      message,
-    };
+    // Get reCAPTCHA token
+    window.grecaptcha
+      .execute("6LdURG8qAAAAAL7ZcQ5WYB4XrQnRuROJx9vieTU_", { action: "submit" })
+      .then((token) => {
+        const templateParams = {
+          subject,
+          user_email: email,
+          message,
+          "g-recaptcha-response": token, // Add the token to templateParams
+        };
 
-    // Send email using EmailJS
-    emailjs
-      .send(
-        "service_xmydokc",
-        "template_96ivq1w",
-        templateParams,
-        "B8zUeMQKB4PbaJXLc"
-      )
-      .then(
-        (response) => {
-          console.log(
-            "Email sent successfully!",
-            response.status,
-            response.text
+        // Send email using EmailJS
+        emailjs
+          .send(
+            "service_xmydokc",
+            "template_96ivq1w",
+            templateParams,
+            "B8zUeMQKB4PbaJXLc"
+          )
+          .then(
+            (response) => {
+              console.log(
+                "Email sent successfully!",
+                response.status,
+                response.text
+              );
+            },
+            (error) => {
+              console.log("Failed to send email. Error:", error);
+            }
           );
-        },
-        (error) => {
-          console.log("Failed to send email. Error:", error);
-        }
-      );
 
-    // Clear form fields after sending
-    setSubject("");
-    setEmail("");
-    setMessage("");
+        // Clear form fields after sending
+        setSubject("");
+        setEmail("");
+        setMessage("");
+      });
   };
 
   return (
@@ -55,7 +61,7 @@ export const Email = () => {
         {/* Contact Form Column */}
         <MDBCol lg="6" className="mb-4">
           <h2 className="mb-4">
-            <h5>Get in touch</h5>
+            <h4>Send Me a Message</h4>
           </h2>
           <form onSubmit={handleSubmit}>
             <MDBRow className="mb-4">

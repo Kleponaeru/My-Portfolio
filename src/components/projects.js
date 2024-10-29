@@ -1,6 +1,6 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
-import useScrollAnimation from '../components/useScrollAnimation';
+import useScrollAnimation from './useScrollAnimation';
 import colorSharp from "../assets/img/color-sharp.png";
 import cardItem1 from '../assets/img/coding-background.jpg';
 import cardItem2 from '../assets/img/web-dev-2.jpg';

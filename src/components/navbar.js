@@ -40,8 +40,8 @@ export const NavBar = () => {
           <Nav className="me-auto">
             <Nav.Link
               href="#home"
-              className={
-                activeLink === "home" ? "active navbar-link" : "navbar-link"
+              className={ 
+                activeLink === "home" ? "active navbar-link" : "navbar-link" 
               }
               onClick={() => onUpdateActiveLink("home")}
             >

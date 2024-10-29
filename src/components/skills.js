@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
-import useScrollAnimation from '../components/useScrollAnimation';
+import useScrollAnimation from './useScrollAnimation';
 import jsLogo from '../assets/img/jslogo.png';
 import mySqlLogo from '../assets/img/5968363.png';
 import laravelLogo from '../assets/img/Laravel.svg.png';
