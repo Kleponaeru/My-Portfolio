@@ -6,7 +6,8 @@ import {
   Download,
 } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
-import colorSharp from "../assets/img/color-sharp.png";
+// import colorSharp from "../assets/img/color-sharp.png";
+import bgBalls from '../assets/img/Design\ -\ 1.png';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -115,11 +116,11 @@ export const Banner = () => {
           </Col>
         </Row>
       </Container>
-      <img
-        className="background-image-left"
-        src={colorSharp}
+      {/* <img
+        className=""
+        src={bgBalls}
         alt="background"
-      />
+      /> */}
     </section>
   );
 };

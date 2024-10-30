@@ -48,9 +48,20 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
+  min-height: 100vh;
   background-color: #121212 !important;
   color: #fff !important;
   font-family: "Centra", sans-serif !important;
+  background-image: url("./assets/img/Design\ -\ 1 (1).png");
+  background-size: cover;
+  background-repeat: repeat;
+  /* background-attachment: fixed; */ /* Keep this commented out */
+}
+
+/* Add this if you need to ensure minimum section heights */
+.section-wrapper {
+  min-height: 100vh;
+  width: 100%;
 }
 
 h1,
@@ -141,7 +152,7 @@ nav.navbar.scrolled {
     255,
     0.05
   ); /* Very light and transparent white */
-  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  backdrop-filter: blur(10px);
 }
 nav.navbar a.navbar-brand {
   width: 9%;
@@ -673,8 +684,13 @@ button:hover {
 }
 
 .custom-background {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.05
+  ); /* Very light and transparent white */
+  backdrop-filter: blur(10px);
 }
 
 .footer .btn-outline-light {
@@ -709,27 +725,8 @@ button:hover {
 }
 
 /* Webkit browsers (Chrome, Safari, newer versions of Edge) */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #a0a0a0;
-}
-
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #888 #1a1a1a;
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
 }
 
 .fade-in-section {
@@ -751,4 +748,43 @@ button:hover {
 
 .grecaptcha-badge {
   visibility: hidden;
+}
+
+/* SCROLL LINE CSS */
+.scroll-line-container {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  transition: 0.32s ease-in-out;
+}
+
+/* Mobile styles (default) */
+@media (max-width: 991px) {
+  .scroll-line-container {
+    top: 64px; /* Reduced from 74px */
+  }
+
+  nav.navbar.scrolled ~ .scroll-line-container {
+    top: 66px; /* Reduced from 56px */
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+  .scroll-line-container {
+    top: 94px; /* Your current desktop value */
+  }
+
+  nav.navbar.scrolled ~ .scroll-line-container {
+    top: 76px; /* Your current desktop scrolled value */
+  }
+}
+
+.scroll-line {
+  height: 2px;
+  background: rgba(136, 94, 251, 0.8);
+  width: 0%;
+  transition: width 0.1s ease-in-out;
+  backdrop-filter: blur(10px);
 }
