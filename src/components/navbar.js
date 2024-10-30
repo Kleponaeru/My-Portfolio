@@ -6,27 +6,33 @@ import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import navIcon4 from "../assets/img/nav-icon4.svg";
 import CustomScrollbar from "./CustomScrollbar";
+import ThemeToggleButton from "./toggle-theme/toggleTheme";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState("dark"); // Default to dark theme
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  //declare active link
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
+
+  const handleToggle = () => {
+    setCurrentTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+  };
+
+  useEffect(() => {
+    // Toggle light-theme class on the body based on currentTheme
+    document.body.classList.toggle("light-theme", currentTheme === "light");
+  }, [currentTheme]);
 
   return (
     <>
@@ -43,37 +49,31 @@ export const NavBar = () => {
               <Nav className="me-auto">
                 <Nav.Link
                   href="#home"
-                  className={
-                    activeLink === "home" ? "active navbar-link" : "navbar-link"
-                  }
+                  className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
                   onClick={() => onUpdateActiveLink("home")}
                 >
                   Home
                 </Nav.Link>
                 <Nav.Link
                   href="#skills"
-                  className={
-                    activeLink === "skills"
-                      ? "active navbar-link"
-                      : "navbar-link"
-                  }
+                  className={activeLink === "skills" ? "active navbar-link" : "navbar-link"}
                   onClick={() => onUpdateActiveLink("skills")}
                 >
                   Skills
                 </Nav.Link>
                 <Nav.Link
                   href="#projects"
-                  className={
-                    activeLink === "projects"
-                      ? "active navbar-link"
-                      : "navbar-link"
-                  }
+                  className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
                   onClick={() => onUpdateActiveLink("projects")}
                 >
                   Projects
                 </Nav.Link>
               </Nav>
               <span className="navbar-text">
+                <ThemeToggleButton
+                  handleToggle={handleToggle}
+                  currentTheme={currentTheme}
+                />
                 <div className="social-icon">
                   <a href="https://www.linkedin.com/in/klvnlie08/">
                     <img src={navIcon1} alt="" />
@@ -88,9 +88,6 @@ export const NavBar = () => {
                     <img src={navIcon4} alt="" />
                   </a>
                 </div>
-                {/* <button className="vvd" onClick={() => console.log("connect")}>
-              <span>Let's Connect</span>
-            </button> */}
               </span>
             </Navbar.Collapse>
           </Container>

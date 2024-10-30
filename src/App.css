@@ -31,6 +31,10 @@
   --bg-dark: rgba(26, 26, 26, 0.9);
   --bg-lighter: rgba(42, 42, 42, 0.9);
   --glass-bg: rgba(255, 255, 255, 0.03);
+  --background-color: black; /* Dark background */
+  --text-color: white; /* Light text color */
+  --button-background: rgba(217, 217, 217, 0.1); /* Dark button background */
+  --button-border: rgba(255, 255, 255, 0.5); /* Dark button border */
 }
 html,
 body {
@@ -55,7 +59,8 @@ body {
   background-image: url("./assets/img/Design\ -\ 1 (1).png");
   background-size: cover;
   background-repeat: repeat;
-  /* background-attachment: fixed; */ /* Keep this commented out */
+  background-color: black;
+  color: white;
 }
 
 /* Add this if you need to ensure minimum section heights */
@@ -136,6 +141,7 @@ p.danger {
   color: red;
 }
 /************ Navbar Css ************/
+/* Navbar Styles */
 nav.navbar {
   padding: 18px 0;
   position: fixed;
@@ -144,6 +150,7 @@ nav.navbar {
   z-index: 9999;
   transition: 0.32s ease-in-out;
 }
+
 nav.navbar.scrolled {
   padding: 9px 0;
   background-color: rgba(
@@ -154,29 +161,35 @@ nav.navbar.scrolled {
   ); /* Very light and transparent white */
   backdrop-filter: blur(10px);
 }
+
 nav.navbar a.navbar-brand {
   width: 9%;
 }
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important;
+  color: #fff !important; /* Default to white in dark theme */
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
   opacity: 0.75;
 }
+
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
 }
+
 span.navbar-text {
   display: flex;
   align-items: center;
 }
+
 .social-icon {
   display: inline-block;
   margin-left: 14px;
 }
+
 .social-icon a {
   width: 42px;
   height: 42px;
@@ -189,6 +202,7 @@ span.navbar-text {
   line-height: 1;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 .social-icon a::before {
   content: "";
   width: 42px;
@@ -199,22 +213,26 @@ span.navbar-text {
   transform: scale(0);
   transition: 0.3s ease-in-out;
 }
+
 .social-icon a:hover::before {
   transform: scale(1);
 }
+
 .social-icon a img {
   width: 40%;
   z-index: 1;
   transition: 0.3s ease-in-out;
 }
+
 .social-icon a:hover img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
     hue-rotate(346deg) brightness(95%) contrast(86%);
 }
+
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #fff; /* Default button text color */
+  border: 1px solid #fff; /* Default button border color */
   padding: 18px 34px;
   font-size: 18px;
   margin-left: 18px;
@@ -222,73 +240,78 @@ span.navbar-text {
   background-color: transparent;
   transition: 0.3s ease-in-out;
 }
+
 .navbar-text button span {
   z-index: 1;
 }
+
 .navbar-text button::before {
   content: "";
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
+  background-color: #fff; /* Default button background */
   left: 0;
   top: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
+
 .navbar-text button:hover {
   color: #121212;
 }
+
 .navbar-text button:hover::before {
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
 }
-nav.navbar .navbar-toggler:active,
-nav.navbar .navbar-toggler:focus {
-  outline: none;
-  box-shadow: none;
+
+/* Toggle Button Styles */
+.toggle-theme {
+  background: rgba(217, 217, 217, 0.1) !important; /* Dark button background */
+  border: 1px solid rgba(255, 255, 255, 0.5) !important; /* Dark button border */
 }
-nav.navbar .navbar-toggler-icon {
-  width: 24px;
-  height: 17px;
-  background-image: none;
-  position: relative;
-  border-bottom: 2px solid #fff;
-  transition: all 300ms linear;
-  top: -2px;
+
+/* Light Theme Styles */
+body.light-theme {
+  background-color: white !important; /* Light background */
+  color: black !important; /* Dark text color */
 }
-nav.navbar .navbar-toggler-icon:focus {
-  border-bottom: 2px solid #fff;
+
+/* Change text color for navbar links in light theme */
+body.light-theme nav.navbar .navbar-nav .nav-link.navbar-link {
+  color: black !important; /* Set navbar link color to black in light theme */
 }
-nav.navbar .navbar-toggler-icon:after,
-nav.navbar .navbar-toggler-icon:before {
-  width: 24px;
-  position: absolute;
-  height: 2px;
-  background-color: #fff;
-  top: 0;
-  left: 0;
-  content: "";
-  z-index: 2;
-  transition: all 300ms linear;
+
+body.light-theme .navbar-brand {
+  color: black !important; /* Set navbar brand color to black in light theme */
 }
-nav.navbar .navbar-toggler-icon:after {
-  top: 8px;
+
+body.light-theme nav.navbar .navbar-nav .nav-link.navbar-link.active {
+  color: darkgray !important; /* Optional: Set active link color to a darker shade */
 }
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
-  transform: rotate(45deg);
-  background-color: #fff;
-  height: 2px;
+
+/* Ensure button text color is also black */
+body.light-theme .navbar-text button {
+  color: black !important; /* Set button text color to black in light theme */
 }
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
-  transform: translateY(8px) rotate(-45deg);
-  background-color: #fff;
-  height: 2px;
+
+.card-title,
+.card-description {
+  color: black; /* Text color for card title and description in light theme */
 }
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-  border-color: transparent;
+
+/* Style for links within the card */
+.card-content a.more {
+  color: black; /* Link color in light theme */
+  border: 1px solid black; /* Border color for link in light theme */
+}
+
+/* Optional: Hover effect for card link */
+.card-content a.more:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Optional hover background */
 }
 
 /************ Banner Css ************/
@@ -787,4 +810,155 @@ body::-webkit-scrollbar {
   width: 0%;
   transition: width 0.1s ease-in-out;
   backdrop-filter: blur(10px);
+}
+
+/* Light Dark Mode */
+.toggle-theme {
+  width: 42px !important;
+  height: 42px !important;
+  background: rgba(217, 217, 217, 0.1) !important;
+  display: inline-flex !important;
+  border-radius: 50% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  outline: none !important;
+  background: rgba(217, 217, 217, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.toggle-theme::before {
+  content: "";
+  width: 42px !important;
+  height: 42px !important;
+  position: absolute !important;
+  background-color: #ffffff !important;
+  border-radius: 50% !important;
+  transform: scale(0) !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+.toggle-theme:hover::before {
+  transform: scale(1) !important; /* Scale on hover */
+}
+
+.toggle-theme svg {
+  width: 20px !important; /* Icon size */
+  height: 20px !important; /* Icon size */
+  z-index: 1 !important; /* Ensure icons are on top */
+  transition: filter 0.3s ease-in-out !important; /* Smooth transition for icons */
+}
+
+.toggle-theme:hover svg {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
+    hue-rotate(346deg) brightness(95%) contrast(86%) !important; /* Hover effect */
+}
+
+body.light-theme {
+  background-color: white !important;
+  background-image: url("./assets/img/Design\ -\ 3.png") !important; /* Set your light theme background image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  color: black !important;
+}
+body.light-theme .toggle-theme {
+  background: rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+body.light-theme .navbar-link {
+  color: black !important;
+}
+
+body .navbar-link {
+  color: white !important;
+}
+
+/* New rule to make all button text black in light theme */
+body.light-theme button {
+  color: black !important; /* Set button text color to black */
+}
+body.light-theme p,
+body.light-theme a,
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme .navbar-link {
+  color: black !important; /* Set text color to black */
+}
+body.light-theme .card-project {
+  color: black !important; /* Set default text color for cards to black */
+}
+
+body.light-theme .card-title,
+body.light-theme .card-description {
+  color: black !important; /* Set card title and description to black */
+}
+
+body.light-theme .more {
+  outline: 1px solid black !important; /* Set outline color to black */
+  text-decoration: none;
+}
+
+.navbar-link {
+  color: white; /* Dark theme link color */
+}
+
+/* Light theme styles */
+body.light-theme .navbar-link {
+  color: black !important; /* Light theme link color */
+}
+
+body.light-theme .navbar-link:hover,
+body.light-theme .navbar-link.active {
+  color: darkgray !important; /* Optional hover/active state color */
+}
+
+/* Toggle button styles */
+body.light-theme .toggle-theme {
+  background: rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Light Theme Styles for tech tool items */
+body.light-theme .tech-tool-item {
+  background-color: rgba(0, 0, 0, 0.15); /* Darker glass effect */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Add a light border for definition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lighten shadow for a softer look */
+}
+
+/* Hover effect */
+.tech-tool-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(28, 28, 28, 0.35);
+}
+
+/* Light theme hover effect */
+body.light-theme .tech-tool-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+/* Light Theme Styles for Social Icons */
+body.light-theme .social-icon a {
+  background: rgba(0, 0, 0, 0.1); /* Darker background for light mode */
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Darker border */
+}
+
+body.light-theme .social-icon a::before {
+  background-color: rgba(0, 0, 0, 0.1); /* Dark hover effect */
+}
+
+body.light-theme .social-icon a img {
+  filter: invert(1); /* Changes to black for dark elements in light mode */
+}
+
+body.light-theme .social-icon a:hover img {
+  filter: brightness(0.2) saturate(100%) invert(0%) sepia(10%) saturate(90%)
+    hue-rotate(0deg) brightness(100%) contrast(100%);
 }
