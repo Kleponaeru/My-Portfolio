@@ -67,7 +67,7 @@ export const Email = () => {
             <MDBRow className="mb-4">
               <MDBCol md="6">
                 <MDBInput
-                  label="Subject"
+                  label="Subject "
                   type="text"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
@@ -78,7 +78,7 @@ export const Email = () => {
               </MDBCol>
               <MDBCol md="6">
                 <MDBInput
-                  label="Email"
+                  label="Email "
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -90,7 +90,7 @@ export const Email = () => {
             </MDBRow>
 
             <MDBTextArea
-              label="Your message"
+              label="Your message "
               rows={8}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
