@@ -323,19 +323,32 @@ body.light-theme .navbar-text button {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
   background: linear-gradient(
-    90.21deg,
-    rgba(170, 54, 124, 0.5) -5.91%,
-    rgba(74, 47, 189, 0.5) 111.58%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.5);
+      145deg,
+      rgba(255, 255, 255, 0.02),
+      /* Reduced opacity */ rgba(170, 54, 124, 0.08),
+      /* Much softer purple */ rgba(74, 47, 189, 0.08) /* Much softer blue */
+    ),
+    linear-gradient(
+      90.21deg,
+      rgba(170, 54, 124, 0.1) -5.91%,
+      /* Reduced purple opacity */ rgba(74, 47, 189, 0.1) 111.58%
+        /* Reduced blue opacity */
+    );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Softer border */
+  border-radius: 8px;
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lighter shadow */
 }
 
 .light-theme .banner .tagline {
@@ -865,11 +878,21 @@ body.light-theme .toggle-theme:hover::before {
   background-color: rgba(0, 0, 0, 0.1) !important; /* Dark hover effect */
 }
 body.light-theme .toggle-theme::before {
-  background-color: rgba(0, 0, 0, 0.1); /* Persistent dark color in light mode */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Persistent dark color in light mode */
 }
 
 body.light-theme .toggle-theme {
-  background: rgba(0, 0, 0, 0.1) !important; /* Darker background for light mode */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ) !important; /* Darker background for light mode */
   border-color: rgba(0, 0, 0, 0.2) !important; /* Darker border */
 }
 
