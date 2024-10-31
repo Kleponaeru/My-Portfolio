@@ -7,6 +7,7 @@ import navIcon3 from "../assets/img/nav-icon3.svg";
 import navIcon4 from "../assets/img/nav-icon4.svg";
 import CustomScrollbar from "./CustomScrollbar";
 import ThemeToggleButton from "./toggle-theme/toggleTheme";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -43,27 +44,39 @@ export const NavBar = () => {
               <img className="logo" src={logo} alt="logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav">
-              <span className="navbar-toggler-icon"></span>
+              <Navbar.Toggle aria-controls="basic-navbar-nav">
+                <RxHamburgerMenu className="toggle-icon" />
+              </Navbar.Toggle>
             </Navbar.Toggle>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link
                   href="#home"
-                  className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
+                  className={
+                    activeLink === "home" ? "active navbar-link" : "navbar-link"
+                  }
                   onClick={() => onUpdateActiveLink("home")}
                 >
                   Home
                 </Nav.Link>
                 <Nav.Link
                   href="#skills"
-                  className={activeLink === "skills" ? "active navbar-link" : "navbar-link"}
+                  className={
+                    activeLink === "skills"
+                      ? "active navbar-link"
+                      : "navbar-link"
+                  }
                   onClick={() => onUpdateActiveLink("skills")}
                 >
                   Skills
                 </Nav.Link>
                 <Nav.Link
                   href="#projects"
-                  className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
+                  className={
+                    activeLink === "projects"
+                      ? "active navbar-link"
+                      : "navbar-link"
+                  }
                   onClick={() => onUpdateActiveLink("projects")}
                 >
                   Projects

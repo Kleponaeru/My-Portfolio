@@ -106,7 +106,7 @@ img {
   font-family: Arial Black, Helvetica, sans-serif;
   font-weight: 900;
   letter-spacing: 0.1em;
-  font-size: 2em; /* Adjust as needed */
+  font-size: 2em;
 }
 
 .logo::after {
@@ -282,7 +282,7 @@ body.light-theme {
 
 /* Change text color for navbar links in light theme */
 body.light-theme nav.navbar .navbar-nav .nav-link.navbar-link {
-  color: black !important; /* Set navbar link color to black in light theme */
+  color: darkgray !important; /* Set navbar link color to black in light theme */
 }
 
 body.light-theme .navbar-brand {
@@ -290,7 +290,7 @@ body.light-theme .navbar-brand {
 }
 
 body.light-theme nav.navbar .navbar-nav .nav-link.navbar-link.active {
-  color: darkgray !important; /* Optional: Set active link color to a darker shade */
+  color: black !important; /* Optional: Set active link color to a darker shade */
 }
 
 /* Ensure button text color is also black */
@@ -305,8 +305,8 @@ body.light-theme .navbar-text button {
 
 /* Style for links within the card */
 .card-content a.more {
-  color: black; /* Link color in light theme */
-  border: 1px solid black; /* Border color for link in light theme */
+  color: rgb(247, 247, 247); /* Link color in light theme */
+  border: 1px solid rgb(236, 236, 236); /* Border color for link in light theme */
 }
 
 /* Optional: Hover effect for card link */
@@ -337,6 +337,25 @@ body.light-theme .navbar-text button {
   margin-bottom: 16px;
   display: inline-block;
 }
+
+.light-theme .banner .tagline {
+  color: #2d3748;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(
+    90.21deg,
+    rgba(235, 215, 190, 0.8) -5.91%,
+    rgba(220, 185, 190, 0.6) 50%,
+    rgba(190, 190, 225, 0.6) 111.58% /* Soft lavender-gray */
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
 .banner h1 {
   font-size: 65px;
   font-weight: 700;
@@ -831,7 +850,7 @@ body::-webkit-scrollbar {
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 
-.toggle-theme::before {
+/* .toggle-theme::before {
   content: "";
   width: 42px !important;
   height: 42px !important;
@@ -840,10 +859,18 @@ body::-webkit-scrollbar {
   border-radius: 50% !important;
   transform: scale(0) !important;
   transition: transform 0.3s ease-in-out !important;
+} */
+
+body.light-theme .toggle-theme:hover::before {
+  background-color: rgba(0, 0, 0, 0.1) !important; /* Dark hover effect */
+}
+body.light-theme .toggle-theme::before {
+  background-color: rgba(0, 0, 0, 0.1); /* Persistent dark color in light mode */
 }
 
-.toggle-theme:hover::before {
-  transform: scale(1) !important; /* Scale on hover */
+body.light-theme .toggle-theme {
+  background: rgba(0, 0, 0, 0.1) !important; /* Darker background for light mode */
+  border-color: rgba(0, 0, 0, 0.2) !important; /* Darker border */
 }
 
 .toggle-theme svg {
@@ -859,12 +886,19 @@ body::-webkit-scrollbar {
 }
 
 body.light-theme {
-  background-color: white !important;
-  background-image: url("./assets/img/Design\ -\ 3.png") !important; /* Set your light theme background image */
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: "Centra", sans-serif !important;
+  background-image: url("./assets/img/Design\ -\ 3.png") !important;
   background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
+  background-repeat: repeat;
+  background-color: white !important;
   color: black !important;
 }
+
 body.light-theme .toggle-theme {
   background: rgba(0, 0, 0, 0.1) !important;
   border: 1px solid rgba(0, 0, 0, 0.5) !important;
@@ -880,25 +914,30 @@ body .navbar-link {
 
 /* New rule to make all button text black in light theme */
 body.light-theme button {
-  color: black !important; /* Set button text color to black */
+  color: #2d3748 !important; /* Set button text color to black */
 }
-body.light-theme p,
-body.light-theme a,
+
 body.light-theme h1,
 body.light-theme h2,
 body.light-theme h3,
 body.light-theme h4,
-body.light-theme h5,
-body.light-theme .navbar-link {
-  color: black !important; /* Set text color to black */
+body.light-theme h5 {
+  color: #322659 !important;
 }
+
+body.light-theme p,
+body.light-theme a,
+body.light-theme .navbar-link {
+  color: #2d3748 !important;
+}
+
 body.light-theme .card-project {
-  color: black !important; /* Set default text color for cards to black */
+  color: #2d3748 !important; /* Set default text color for cards to black */
 }
 
 body.light-theme .card-title,
 body.light-theme .card-description {
-  color: black !important; /* Set card title and description to black */
+  color: #2d3748 !important; /* Set card title and description to black */
 }
 
 body.light-theme .more {
@@ -961,4 +1000,22 @@ body.light-theme .social-icon a img {
 body.light-theme .social-icon a:hover img {
   filter: brightness(0.2) saturate(100%) invert(0%) sepia(10%) saturate(90%)
     hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+body.light-mode .invert-on-light {
+  filter: invert(1);
+}
+
+.light-theme .logo {
+  filter: invert(1);
+}
+
+.toggle-icon {
+  font-size: 30px;
+  color: #eaeaea; /* Default white for dark mode */
+}
+
+/* When light-theme class is on body or parent container */
+.light-theme .toggle-icon {
+  color: #000000;
 }
