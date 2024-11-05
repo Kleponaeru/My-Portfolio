@@ -1,9 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useMousePosition from "./useMousePosition";
 
 const CursorFollower = ({ includeTouch }) => {
   const { x, y } = useMousePosition({ includeTouch });
   const isDesktop = window.innerWidth > 768;
+  const [theme, setTheme] = useState("dark");
+
+  // Watch for light-theme class on body
+  useEffect(() => {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+          setTheme(document.body.classList.contains("light-theme") ? "light" : "dark");
+        }
+      });
+    });
+
+    observer.observe(document.body, {
+      attributes: true
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const themeColors = {
+    light: {
+      main: "#301934",  // Dark cursor for light mode
+      glow: "155, 89, 182", // Purple glow
+    },
+    dark: {
+      main: "#ffffff",  // Light cursor for dark mode
+      glow: "155, 89, 182", // Same purple glow
+    }
+  };
+
+  const currentColors = themeColors[theme];
 
   const baseStyle = {
     position: "fixed",
@@ -14,6 +45,7 @@ const CursorFollower = ({ includeTouch }) => {
     borderRadius: "50%",
     pointerEvents: "none",
     transform: "translate(-50%, -50%)",
+    zIndex: 9999,
   };
 
   if (!isDesktop) return null;
@@ -22,13 +54,13 @@ const CursorFollower = ({ includeTouch }) => {
       <div
         style={{
           ...baseStyle,
-          backgroundColor: "#FFFFFF", // Main circle color
+          backgroundColor: currentColors.main,
           boxShadow: `
-          0 0 20px rgba(255, 255, 255, 0.6),
-          0 0 30px rgba(155, 89, 182, 0.8),  
-          0 0 50px rgba(155, 89, 182, 0.6), 
-          0 0 70px rgba(155, 89, 182, 0.4)
-      `,
+          0 0 20px rgba(${currentColors.glow}, 0.6),
+          0 0 30px rgba(${currentColors.glow}, 0.8),  
+          0 0 50px rgba(${currentColors.glow}, 0.6), 
+          0 0 70px rgba(${currentColors.glow}, 0.4)
+        `,
         }}
       />
       {[...Array(5)].map((_, i) => (
@@ -36,7 +68,7 @@ const CursorFollower = ({ includeTouch }) => {
           key={i}
           style={{
             ...baseStyle,
-            backgroundColor: "#FFFFFF",
+            backgroundColor: currentColors.main,
             opacity: 0.5 - i * 0.1,
             transition: `all ${0.1 + i * 0.05}s ease-out`,
             transform: `translate(-50%, -50%) scale(${1 - i * 0.1})`,

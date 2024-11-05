@@ -411,21 +411,6 @@ button:hover {
 .banner img {
   animation: updown 4s linear infinite;
 }
-.background-image-left {
-  top: 1%;
-  position: absolute;
-  object-fit: cover;
-  z-index: -4;
-  overflow: hidden;
-}
-.background-image-right {
-  top: 30%;
-  position: absolute;
-  object-fit: cover;
-  z-index: -4;
-  overflow: hidden;
-  transform: rotate(180deg);
-}
 
 @keyframes updown {
   0% {
@@ -777,6 +762,7 @@ button:hover {
 
 .footer .btn-outline-light:hover .fab {
   transform: scale(1.1);
+  filter: invert(1);
 }
 
 /* Webkit browsers (Chrome, Safari, newer versions of Edge) */
@@ -915,7 +901,8 @@ body.light-theme {
   background-color: #121212 !important;
   color: #fff !important;
   font-family: "Centra", sans-serif !important;
-  background-image: url("./assets/img/Design\ -\ 3.png") !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("./assets/img/heart-bg.png") !important;
   background-size: cover; /* Cover the entire area */
   background-repeat: repeat;
   background-color: white !important;
