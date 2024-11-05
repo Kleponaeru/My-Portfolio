@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/My-Portfolio/static/css/main.02fca2d6.css",
-    "main.js": "/My-Portfolio/static/js/main.48b7c5b1.js",
+    "main.css": "/My-Portfolio/static/css/main.0e4ae475.css",
+    "main.js": "/My-Portfolio/static/js/main.ecb6f3bc.js",
     "static/js/453.acca0757.chunk.js": "/My-Portfolio/static/js/453.acca0757.chunk.js",
     "static/media/Design - 1 (1).png": "/My-Portfolio/static/media/Design - 1 (1).802197ee85a470e83c40.png",
     "static/media/sword-heart.png": "/My-Portfolio/static/media/sword-heart.855c56ee29d93489aa51.png",
@@ -45,12 +45,12 @@
     "static/media/nav-icon1.svg": "/My-Portfolio/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/logo-ly.svg": "/My-Portfolio/static/media/logo-ly.5e7f94a63112b600e47b6da7ed34584a.svg",
     "static/media/nav-icon2.svg": "/My-Portfolio/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
-    "main.02fca2d6.css.map": "/My-Portfolio/static/css/main.02fca2d6.css.map",
-    "main.48b7c5b1.js.map": "/My-Portfolio/static/js/main.48b7c5b1.js.map",
+    "main.0e4ae475.css.map": "/My-Portfolio/static/css/main.0e4ae475.css.map",
+    "main.ecb6f3bc.js.map": "/My-Portfolio/static/js/main.ecb6f3bc.js.map",
     "453.acca0757.chunk.js.map": "/My-Portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.02fca2d6.css",
-    "static/js/main.48b7c5b1.js"
+    "static/css/main.0e4ae475.css",
+    "static/js/main.ecb6f3bc.js"
   ]
 }
