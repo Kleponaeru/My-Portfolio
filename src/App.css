@@ -127,6 +127,7 @@ select:focus {
   outline: none;
 }
 
+
 @media (min-width: 1700px) {
   main .container {
     max-width: 100%;
@@ -410,6 +411,8 @@ button:hover {
   animation: updown 4s linear infinite;
   mix-blend-mode: luminosity;
   padding-top: 28px;
+  user-drag: none; /* Prevents dragging */
+  pointer-events: none; /* Optional: prevents interactions */
 }
 
 .light-theme .banner img {

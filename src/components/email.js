@@ -132,6 +132,7 @@ export const Email = () => {
             <img
               src="https://i.gifer.com/y2.gif"
               alt="Exciting GIF"
+              draggable="false"
               style={{
                 maxWidth: "24%",
                 height: "auto",
