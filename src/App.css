@@ -127,7 +127,6 @@ select:focus {
   outline: none;
 }
 
-
 @media (min-width: 1700px) {
   main .container {
     max-width: 100%;
@@ -326,26 +325,20 @@ body.light-theme .navbar-text button {
   letter-spacing: 0.8px;
   padding: 8px 10px;
   background: linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.02),
-      /* Reduced opacity */ rgba(170, 54, 124, 0.08),
-      /* Much softer purple */ rgba(74, 47, 189, 0.08) /* Much softer blue */
-    ),
-    linear-gradient(
-      90.21deg,
-      rgba(170, 54, 124, 0.1) -5.91%,
-      /* Reduced purple opacity */ rgba(74, 47, 189, 0.1) 111.58%
-        /* Reduced blue opacity */
-    );
+    90deg,
+    rgba(50, 10, 60, 0.7) 0%,
+    /* Darker purple */ rgba(100, 50, 130, 0.5) 50%,
+    /* Medium purple */ rgba(160, 100, 180, 0.3) 100% /* Light purple */
+  );
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Softer border */
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
   color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .light-theme .banner .tagline {
