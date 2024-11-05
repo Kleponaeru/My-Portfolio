@@ -5,9 +5,7 @@ import {
   CloudDownloadFill,
   Download,
 } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg";
-// import colorSharp from "../assets/img/color-sharp.png";
-import bgBalls from '../assets/img/Design\ -\ 1.png';
+import headerImg from "../assets/img/sword-heart.png";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -85,7 +83,7 @@ export const Banner = () => {
             <span className="tagline">Welcome to my portfolio</span>
             <h1>{"Hi! I'm Kelvin Lie"} </h1>
             <Row>
-              <h1>
+              <h1 className="typing-container">
                 <span
                   className="txt-rotate"
                   dataPeriod="1000"

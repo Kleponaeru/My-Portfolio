@@ -25,9 +25,9 @@ const CursorFollower = ({ includeTouch }) => {
 
   const themeColors = {
     light: {
-      main: "#301934",  // Dark cursor for light mode
-      glow: "155, 89, 182", // Purple glow
-    },
+      main: "#EE1D2A",  // Red cursor for light mode
+      glow: "255, 0, 0", // Red glow
+    },    
     dark: {
       main: "#ffffff",  // Light cursor for dark mode
       glow: "155, 89, 182", // Same purple glow
@@ -56,10 +56,10 @@ const CursorFollower = ({ includeTouch }) => {
           ...baseStyle,
           backgroundColor: currentColors.main,
           boxShadow: `
-          0 0 20px rgba(${currentColors.glow}, 0.6),
-          0 0 30px rgba(${currentColors.glow}, 0.8),  
-          0 0 50px rgba(${currentColors.glow}, 0.6), 
-          0 0 70px rgba(${currentColors.glow}, 0.4)
+          0 0 20px rgba(${currentColors.glow}, 0.4),
+          0 0 30px rgba(${currentColors.glow}, 0.5),  
+          0 0 50px rgba(${currentColors.glow}, 0.4), 
+          0 0 70px rgba(${currentColors.glow}, 0.2)
         `,
         }}
       />

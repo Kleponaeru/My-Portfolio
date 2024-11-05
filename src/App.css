@@ -31,6 +31,7 @@
   --bg-dark: rgba(26, 26, 26, 0.9);
   --bg-lighter: rgba(42, 42, 42, 0.9);
   --glass-bg: rgba(255, 255, 255, 0.03);
+  --red-glass-bg: rgba(255, 182, 182, 0.03); /* Light red with transparency */
   --background-color: black; /* Dark background */
   --text-color: white; /* Light text color */
   --button-background: rgba(217, 217, 217, 0.1); /* Dark button background */
@@ -298,11 +299,6 @@ body.light-theme .navbar-text button {
   color: black !important; /* Set button text color to black in light theme */
 }
 
-.card-title,
-.card-description {
-  color: black; /* Text color for card title and description in light theme */
-}
-
 /* Style for links within the card */
 .card-content a.more {
   color: rgb(247, 247, 247); /* Link color in light theme */
@@ -352,18 +348,19 @@ body.light-theme .navbar-text button {
 }
 
 .light-theme .banner .tagline {
-  color: #2d3748;
+  color: #2d3748; /* Keep the text color as is */
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
   background: linear-gradient(
     90.21deg,
-    rgba(235, 215, 190, 0.8) -5.91%,
-    rgba(220, 185, 190, 0.6) 50%,
-    rgba(190, 190, 225, 0.6) 111.58% /* Soft lavender-gray */
+    rgba(255, 0, 0, 0.5) -5.91%,
+    /* Red */ rgba(255, 99, 71, 0.4) 50%,
+    /* Softer tomato red */ rgba(255, 105, 180, 0.3) 111.58%
+      /* Softer hot pink */
   );
 
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Reduced border opacity */
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
@@ -408,8 +405,17 @@ button {
 button:hover {
   transform: scale(1.1);
 }
+
 .banner img {
   animation: updown 4s linear infinite;
+  mix-blend-mode: luminosity;
+  padding-top: 28px;
+}
+
+.light-theme .banner img {
+  animation: updown 4s linear infinite;
+  mix-blend-mode: normal;
+  padding-top: 28px;
 }
 
 @keyframes updown {
@@ -512,6 +518,14 @@ button:hover {
   font-size: 14px;
   color: var(--text-white);
 }
+.light-theme .tech-tool-item span {
+  font-size: 14px;
+  color: #2b2d42 !important;
+}
+.light-theme .tech-tool-item .skill-level {
+  font-size: 14px;
+  color: #56585c !important;
+}
 
 .skill-level {
   font-size: 12px;
@@ -528,6 +542,9 @@ button:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   padding: 5px;
+}
+.light-theme .nav-tabs {
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 .nav-tabs .nav-item {
@@ -554,6 +571,13 @@ button:hover {
   color: #2b2b4b !important;
   background-color: #38193b;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+}
+
+.light-theme .nav-tabs .nav-link.active {
+  color: #2b2b4b !important;
+  background-color: white;
+  border-bottom: 2px solid rgba(190, 25, 25, 0.837) !important;
   border-radius: 24px;
 }
 
@@ -593,6 +617,16 @@ button:hover {
 
   .skill-level {
     font-size: 10px;
+  }
+  .txt-rotate {
+    min-height: 60px; /* Adjust this value as needed */
+    display: block;
+  }
+  .typing-container {
+    min-height: 144px; /* Adjust this value as needed */
+  }
+  .banner {
+    padding: 260px 0 60px 0;
   }
 }
 
@@ -830,6 +864,14 @@ body::-webkit-scrollbar {
   backdrop-filter: blur(10px);
 }
 
+.light-theme .scroll-line {
+  height: 2px;
+  background: rgba(238, 29, 42, 0.8);
+  width: 0%;
+  transition: width 0.1s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
 /* Light Dark Mode */
 .toggle-theme {
   width: 42px !important;
@@ -932,31 +974,34 @@ body.light-theme h2,
 body.light-theme h3,
 body.light-theme h4,
 body.light-theme h5 {
-  color: #322659 !important;
+  color: #2b2d42 !important;
 }
 
 body.light-theme p,
 body.light-theme a,
 body.light-theme .navbar-link {
-  color: #2d3748 !important;
+  color: #69707b !important;
 }
 
 body.light-theme .card-project {
-  color: #2d3748 !important; /* Set default text color for cards to black */
+  color: #2b2d42 !important; /* Set default text color for cards to black */
 }
 
-body.light-theme .card-title,
+body.light-theme .card-title {
+  color: #2b2d42 !important; /* Set card title and description to black */
+}
 body.light-theme .card-description {
-  color: #2d3748 !important; /* Set card title and description to black */
+  color: #69707b !important;
 }
 
 body.light-theme .more {
-  outline: 1px solid black !important; /* Set outline color to black */
+  outline: 1px solid black !important;
+  color: #2b2d42 !important;
   text-decoration: none;
 }
 
 .navbar-link {
-  color: white; /* Dark theme link color */
+  color: white;
 }
 
 /* Light theme styles */
@@ -990,7 +1035,7 @@ body.light-theme .tech-tool-item {
 
 /* Light theme hover effect */
 body.light-theme .tech-tool-item:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Light Theme Styles for Social Icons */

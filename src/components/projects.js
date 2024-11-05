@@ -31,7 +31,7 @@ export const Projects = () => {
       imageUrl: cardItem4,
       title: "Simple API Microservices",
       description:
-        "Designing scalable, maintainable API services using microservices architecture.",
+        "Designing scalable, maintainable APIs using microservices architecture.",
       link: "https://github.com/Kleponaeru/Design-Architecture-Microservices",
     },
     {
@@ -52,7 +52,7 @@ export const Projects = () => {
       imageUrl: cardItem3,
       title: "UI/UX Design",
       description:
-        "User-centered designs focusing on research, wireframing, and prototyping.",
+        "User-centered designs focusing on research, wireframing, prototyping.",
       link: "https://www.figma.com/design/1zNTfs1VYkSUWuX0NH0XK0/Capstone-Project---Let's-Hire?node-id=0-1&t=Ji7buZf2s9MDBua6-1",
     },
     {
