@@ -111,7 +111,7 @@ export const Email = () => {
         <MDBCol lg="6">
           <div className="mb-5">
             <h4 className="mb-3">About Collaboration</h4>
-            <p className="text-muted">
+            <p className="custom-muted">
               I'm always open to discussing new projects, creative ideas, or
               opportunities to be part of your vision. Feel free to reach out
               with any questions about web development, programming, or any
@@ -121,7 +121,7 @@ export const Email = () => {
 
           <div>
             <h4 className="mb-3">Current Availability</h4>
-            <p className="text-muted">
+            <p className="custom-muted" style={{ color: "#00000 !important" }}>
               I'm currently available for freelance work and full-time
               opportunities. Whether you need a website, web application, or
               technical consultation, I'd love to hear about your project and
