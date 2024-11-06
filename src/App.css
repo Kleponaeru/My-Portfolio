@@ -317,7 +317,8 @@ body.light-theme .navbar-text button {
 
 /* Optional: Hover effect for card link */
 .card-content a.more:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Optional hover background */
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #000000;
 }
 
 /************ Banner Css ************/
