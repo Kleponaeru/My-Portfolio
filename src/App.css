@@ -773,9 +773,18 @@ button:hover {
   ); /* Very light and transparent white */
   backdrop-filter: blur(10px);
 }
+.footer a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+  color: #fff;
+}
 
 .footer .btn-outline-light {
-  border-color: #444;
+  border-color: #e0e0e0;
   color: #e0e0e0;
   transition: all 0.3s ease;
 }
@@ -787,21 +796,17 @@ button:hover {
   transform: scale(1.1);
 }
 
-.footer a {
-  color: #e0e0e0;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-.footer a:hover {
-  color: #fff;
-}
-
 .footer .btn-outline-light .fab {
   transition: transform 0.1s ease;
 }
 
-.footer .btn-outline-light:hover .fab {
+.light-theme .footer .btn-outline-light {
+  border-color: #555;
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.light-theme .footer .btn-outline-light:hover .fab {
   transform: scale(1.1);
   filter: invert(1);
 }
