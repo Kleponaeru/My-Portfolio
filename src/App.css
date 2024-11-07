@@ -1084,3 +1084,126 @@ body.light-mode .invert-on-light {
 .custom-muted {
   color: #b8b8b8 !important;
 }
+
+/* CERTIFIED AWARD */
+.certificates-section {
+  padding: 2rem;
+  margin-bottom: 30px;
+}
+
+.certificates-header {
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.certificates-header p {
+  color: #b8b8b8;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.certificate-description {
+  color: #b8b8b8 !important;
+}
+
+.certificates-list,
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.certificate-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--glass-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.certificate-item.hovered {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.certificate-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.certificate-info {
+  flex-grow: 1;
+  margin-left: 1rem;
+  max-height: 80px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.certificate-item.hovered .certificate-info {
+  max-height: 200px;
+}
+
+.certificate-title {
+  font-size: 1rem;
+  margin: 0;
+  word-break: break-word;
+}
+
+.certificate-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.certificate-issued {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 1rem;
+}
+
+.certificate-date p,
+.certificate-link a {
+  font-size: 0.9rem;
+  color: #007bff;
+}
+
+.certificate-link a {
+  text-decoration: none;
+}
+
+.certificate-link a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .certificate-title {
+    font-size: 0.9rem;
+  }
+
+  .certificate-info p {
+    font-size: 0.8rem;
+  }
+
+  .certificate-date p,
+  .certificate-link a {
+    font-size: 0.8rem;
+  }
+
+  .certificate-image img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .certificate-item {
+    padding: 0.8rem;
+  }
+}

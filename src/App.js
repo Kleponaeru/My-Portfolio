@@ -10,7 +10,7 @@ import { Footer } from "./components/footer";
 import { Email } from "./components/email";
 import CursorFollower from "./components/mouse-track/tracking";
 import CustomScrollbar from "./components/CustomScrollbar";
-
+import { CertificationsSection } from "./components/certificationsSection";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
       <Banner></Banner>
       <Skills></Skills>
       <Projects></Projects>
+      <CertificationsSection></CertificationsSection>
       <Email></Email>
       <Footer></Footer>
       <CursorFollower></CursorFollower>
