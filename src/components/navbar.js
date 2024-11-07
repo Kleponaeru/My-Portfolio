@@ -81,6 +81,17 @@ export const NavBar = () => {
                 >
                   Projects
                 </Nav.Link>
+                <Nav.Link
+                  href="#certificates"
+                  className={
+                    activeLink === "Certificates"
+                      ? "active navbar-link"
+                      : "navbar-link"
+                  }
+                  onClick={() => onUpdateActiveLink("certificates")}
+                >
+                  Certificates
+                </Nav.Link>
               </Nav>
               <span className="navbar-text">
                 <ThemeToggleButton

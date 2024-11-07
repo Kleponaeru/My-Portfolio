@@ -121,7 +121,7 @@ export const CertificationsSection = () => {
   return (
     <section
       className="certificates-section"
-      id="skills"
+      id="certificates"
       ref={animationRef}
       style={{ opacity: 0, transform: "translateY(30px)" }}
     >
