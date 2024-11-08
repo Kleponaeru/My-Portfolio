@@ -59,7 +59,7 @@ const CertificateItem = ({ project }) => {
             ? project.description
             : window.innerWidth < 768
             ? truncateDescription(project.description, 30)
-            : truncateDescription(project.description, 80)}
+            : truncateDescription(project.description, 70)}
         </p>
       </div>
       <div className="certificate-issued">
