@@ -1106,7 +1106,14 @@ body.light-mode .invert-on-light {
 }
 
 .certificate-description {
+  margin-top: 4px;
   color: #b8b8b8 !important;
+  
+}
+
+.certificate-item {
+  overflow-y: auto;
+  
 }
 
 .certificates-list,

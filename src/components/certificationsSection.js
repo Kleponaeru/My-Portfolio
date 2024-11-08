@@ -8,6 +8,7 @@ import adobeLogo from "../assets/img/adobe.png";
 
 const CertificateItem = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false); // New state to toggle description expansion
 
   const truncateTitle = (title, maxLength) => {
     if (title.length <= maxLength) {
@@ -22,6 +23,12 @@ const CertificateItem = ({ project }) => {
       return description;
     } else {
       return `${description.substring(0, maxLength)}...`;
+    }
+  };
+
+  const handleDescriptionClick = () => {
+    if (window.innerWidth < 768) {
+      setIsDescriptionExpanded(!isDescriptionExpanded); // Toggle description on mobile
     }
   };
 
@@ -43,9 +50,12 @@ const CertificateItem = ({ project }) => {
             : truncateTitle(project.title, 50)}
         </h3>
         <p
-          className={`certificate-description ${isHovered ? "" : "truncated"}`}
+          className={`certificate-description ${
+            isHovered || isDescriptionExpanded ? "" : "truncated"
+          }`}
+          onClick={handleDescriptionClick} // Add click handler
         >
-          {isHovered
+          {isHovered || isDescriptionExpanded
             ? project.description
             : window.innerWidth < 768
             ? truncateDescription(project.description, 30)
