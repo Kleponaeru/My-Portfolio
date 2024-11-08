@@ -85,26 +85,26 @@ export const CertificationsSection = () => {
       imageUrl: intuitLogo,
       title: "Intuit Design for Delight Innovator",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut risus in pede posuere cursus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+        "Intuit Design for Delight Innovator certification recognizes expertise in applying UX principles to create user-centered designs, focusing on innovation and delighting users.",
       issued: "Issued: Sept 2023",
-      link: "https://example.com/certificate1",
+      link: "https://www.certiport.com/portal/pages/credentialverification.aspx",
     },
     {
       imageUrl: adobeLogo,
       title:
         "Adobe Certified Associate in Graphic Design & Illustration Using Adobe Illustrator",
       description:
-        "Description for certificate 2 that is a bit longer than the first one to test the truncation feature.",
+        "Adobe Certified Associate in Graphic Design & Illustration with Adobe Illustrator validates skills in creating digital artwork, logos, and illustrations using Illustrator.",
       issued: "Issued: Oct 2023",
-      link: "https://example.com/certificate2",
+      link: "https://www.certiport.com/portal/pages/credentialverification.aspx",
     },
     {
       imageUrl: codeCampLogo,
       title: "Foundational C# with Microsoft",
       description:
-        "Description for certificate 2 that is a bit longer than the first one to test the truncation feature.",
+        "Foundational C# with Microsoft certification demonstrates core knowledge and skills in C# programming, covering basic concepts, syntax, and object-oriented programming with Microsoft technologies.",
       issued: "Issued: Mar 2024",
-      link: "https://example.com/certificate2",
+      link: "https://freecodecamp.org/certification/Kleponaeru/foundational-c-sharp-with-microsoft",
     },
     // Add more certificates as needed
   ];
