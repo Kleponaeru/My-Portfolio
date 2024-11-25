@@ -1117,7 +1117,7 @@ body.light-mode .invert-on-light {
 }
 
 .certificates-list,
-.awards-list {
+.experience-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;

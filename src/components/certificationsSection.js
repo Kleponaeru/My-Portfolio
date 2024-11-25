@@ -5,10 +5,14 @@ import useScrollAnimation from "./useScrollAnimation";
 import intuitLogo from "../assets/img/intuit.png";
 import codeCampLogo from "../assets/img/code-camp.png";
 import adobeLogo from "../assets/img/adobe.png";
+import kpnLogo from "../assets/img/kpn-logo.png";
+import ukdwLogo from "../assets/img/logo-ukdw.png";
+import mesLogo from "../assets/img/my-edu.webp";
+import pkmLogo from "../assets/img/dikti.png";
 
-const CertificateItem = ({ project }) => {
+const CertificateItem = ({ project, showLink }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false); // New state to toggle description expansion
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
   const truncateTitle = (title, maxLength) => {
     if (title.length <= maxLength) {
@@ -28,7 +32,7 @@ const CertificateItem = ({ project }) => {
 
   const handleDescriptionClick = () => {
     if (window.innerWidth < 768) {
-      setIsDescriptionExpanded(!isDescriptionExpanded); // Toggle description on mobile
+      setIsDescriptionExpanded(!isDescriptionExpanded);
     }
   };
 
@@ -53,7 +57,7 @@ const CertificateItem = ({ project }) => {
           className={`certificate-description ${
             isHovered || isDescriptionExpanded ? "" : "truncated"
           }`}
-          onClick={handleDescriptionClick} // Add click handler
+          onClick={handleDescriptionClick}
         >
           {isHovered || isDescriptionExpanded
             ? project.description
@@ -66,18 +70,20 @@ const CertificateItem = ({ project }) => {
         <div className="certificate-date">
           <p>{project.issued}</p>
         </div>
-        <div className="certificate-link">
-          <a href={project.link} target="_blank" rel="noopener noreferrer">
-            <TbExternalLink style={{ fontSize: "30px" }} />
-          </a>
-        </div>
+        {showLink && (
+          <div className="certificate-link">
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <TbExternalLink style={{ fontSize: "30px" }} />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export const CertificationsSection = () => {
-  const [activeTab, setActiveTab] = useState("certifications");
+  const [activeTab, setActiveTab] = useState("experience"); // Default to experience
   const animationRef = useScrollAnimation();
 
   const certifData = [
@@ -106,32 +112,54 @@ export const CertificationsSection = () => {
       issued: "Issued: Mar 2024",
       link: "https://freecodecamp.org/certification/Kleponaeru/foundational-c-sharp-with-microsoft",
     },
-    // Add more certificates as needed
   ];
-  const awardData = [
+
+  const experienceData = [
     {
-      imageUrl: intuitLogo,
-      title: "Still on development",
+      imageUrl: kpnLogo,
+      title: "KPN CORP - Web Developer",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut risus in pede posuere cursus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-      issued: "Issued: Mar 2024",
+        "Developed internal web applications for the company using Laravel, JavaScript, and SQL, focusing on front-end, back-end, and database optimization while collaborating to meet company needs.",
+      issued: "Jul 24 - Present",
       link: "https://example.com/certificate1",
     },
     {
-      imageUrl: intuitLogo,
-      title: "Still on development",
+      imageUrl: mesLogo,
+      title: "UI/UX Apprentice",
       description:
-        "Description for certificate 2 that is a bit longer than the first one to test the truncation feature.",
-      issued: "Issued: Mar 2024",
+        "Designed logos, icons, wireframes, and web layouts using Figma and Illustrator, including real-world projects like the Mamikos job portal app to enhance recruitment tools.",
+      issued: "Aug 23 - Jan 24",
       link: "https://example.com/certificate2",
     },
-    // Add more certificates as needed
+    {
+      imageUrl: pkmLogo,
+      title: "PKM-PM - Team Leader",
+      description: "Recipient of the PKM-PM funding stage from DIKTI for the development of DeafLearn, a mobile game designed to support learning for deaf children.",
+      issued: "Jun 23 - Jan 24",
+      link: "https://example.com/certificate2",
+    },
+    {
+      imageUrl: ukdwLogo,
+      title: "Assistant Lectures",
+      description:
+        "Taught Programming Fundamentals, Database Design Practicum, and Database System Practicum to classes of 40-50 students each, providing hands-on guidance and expertise in PHP, CSS, Java, JavaScript, and MySQL.",
+      issued: "Aug 22 - Feb 24",
+      link: "https://example.com/certificate2",
+    },
+    {
+      imageUrl: ukdwLogo,
+      title: "IT Faculty Lab Part-Time Worker",
+      description:
+        "Serving as a part-time worker in the Information Technology Faculty lab, supporting various IT functions and assisting students in a dynamic academic environment.",
+      issued: "Apr 23 - Sep 23",
+      link: "https://example.com/certificate2",
+    },
   ];
 
   return (
     <section
       className="certificates-section"
-      id="certificates"
+      id="experience"
       ref={animationRef}
       style={{ opacity: 0, transform: "translateY(30px)" }}
     >
@@ -139,39 +167,43 @@ export const CertificationsSection = () => {
         <Row className="justify-content-center">
           <Col xs={12} md={10} lg={8}>
             <div className="certificates-header">
-              <h1>Certifications & Awards</h1>
-              <p>Here are some certificates and awards I have earned</p>
+              <h1>Experience & Certifications </h1>
+              <p>Here are some experiences and certifications I have earned</p>
             </div>
             <div className="tech-tools-bx">
               <Nav variant="tabs" className="justify-content-center mb-4">
                 <Nav.Item>
                   <Nav.Link
-                    active={activeTab === "certifications"}
-                    onClick={() => setActiveTab("certifications")}
+                    active={activeTab === "experience"}
+                    onClick={() => setActiveTab("experience")}
                   >
-                    Certificate
+                    Experience
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link
-                    active={activeTab === "awards"}
-                    onClick={() => setActiveTab("awards")}
+                    active={activeTab === "certifications"}
+                    onClick={() => setActiveTab("certifications")}
                   >
-                    Awards
+                    Certification
                   </Nav.Link>
                 </Nav.Item>
               </Nav>
-              {activeTab === "certifications" && (
-                <div className="certificates-list">
-                  {certifData.map((project, index) => (
+              {activeTab === "experience" && (
+                <div className="experience-list">
+                  {experienceData.map((project, index) => (
                     <CertificateItem key={index} project={project} />
                   ))}
                 </div>
               )}
-              {activeTab === "awards" && (
-                <div className="awards-list">
-                  {awardData.map((project, index) => (
-                    <CertificateItem key={index} project={project} />
+              {activeTab === "certifications" && (
+                <div className="certificates-list">
+                  {certifData.map((project, index) => (
+                    <CertificateItem
+                      key={index}
+                      project={project}
+                      showLink={activeTab === "certifications"}
+                    />
                   ))}
                 </div>
               )}
