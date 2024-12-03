@@ -18,8 +18,8 @@ function App() {
       <NavBar></NavBar>
       <Banner></Banner>
       <Skills></Skills>
-      <Projects></Projects>
       <CertificationsSection></CertificationsSection>
+      <Projects></Projects>
       <Email></Email>
       <Footer></Footer>
       <CursorFollower></CursorFollower>

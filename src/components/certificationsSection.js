@@ -36,6 +36,7 @@ const CertificateItem = ({ project, showLink }) => {
     }
   };
 
+  const isMobile = window.innerWidth < 768;
   return (
     <div
       className={`certificate-item ${isHovered ? "hovered" : ""}`}
@@ -47,12 +48,16 @@ const CertificateItem = ({ project, showLink }) => {
       </div>
       <div className="certificate-info">
         <h3 className="certificate-title">
-          {isHovered
-            ? project.title
-            : window.innerWidth < 768
-            ? truncateTitle(project.title, 30)
-            : truncateTitle(project.title, 50)}
+          {isHovered || isDescriptionExpanded
+            ? isMobile
+              ? project.mobileTitle
+              : project.title
+            : truncateTitle(
+                isMobile ? project.mobileTitle : project.title,
+                isMobile ? 30 : 65
+              )}
         </h3>
+
         <p
           className={`certificate-description ${
             isHovered || isDescriptionExpanded ? "" : "truncated"
@@ -60,10 +65,13 @@ const CertificateItem = ({ project, showLink }) => {
           onClick={handleDescriptionClick}
         >
           {isHovered || isDescriptionExpanded
-            ? project.description
-            : window.innerWidth < 768
-            ? truncateDescription(project.description, 30)
-            : truncateDescription(project.description, 70)}
+            ? isMobile
+              ? project.mobileDescription
+              : project.description
+            : truncateDescription(
+                isMobile ? project.mobileDescription : project.description,
+                isMobile ? 30 : 70
+              )}
         </p>
       </div>
       <div className="certificate-issued">
@@ -92,6 +100,8 @@ export const CertificationsSection = () => {
       title: "Intuit Design for Delight Innovator",
       description:
         "Intuit Design for Delight Innovator certification recognizes expertise in applying UX principles to create user-centered designs, focusing on innovation and delighting users.",
+      mobileTitle: "Intuit Design for Delight Innovator",
+      mobileDescription: "Certified in user-centered UX design.",
       issued: "Issued: Sept 2023",
       link: "https://www.certiport.com/portal/pages/credentialverification.aspx",
     },
@@ -101,6 +111,8 @@ export const CertificationsSection = () => {
         "Adobe Certified Associate in Graphic Design & Illustration Using Adobe Illustrator",
       description:
         "Adobe Certified Associate in Graphic Design & Illustration with Adobe Illustrator validates skills in creating digital artwork, logos, and illustrations using Illustrator.",
+      mobileTitle: "Adobe Certified Associate - Illustrator",
+      mobileDescription: "Certified in graphic design using Illustrator.",
       issued: "Issued: Oct 2023",
       link: "https://www.certiport.com/portal/pages/credentialverification.aspx",
     },
@@ -109,6 +121,8 @@ export const CertificationsSection = () => {
       title: "Foundational C# with Microsoft",
       description:
         "Foundational C# with Microsoft certification demonstrates core knowledge and skills in C# programming, covering basic concepts, syntax, and object-oriented programming with Microsoft technologies.",
+      mobileTitle: "C# Certification",
+      mobileDescription: "Certified in C# programming and OOP concepts.",
       issued: "Issued: Mar 2024",
       link: "https://freecodecamp.org/certification/Kleponaeru/foundational-c-sharp-with-microsoft",
     },
@@ -120,6 +134,9 @@ export const CertificationsSection = () => {
       title: "KPN CORP - Web Developer",
       description:
         "Developed internal web applications for the company using Laravel, JavaScript, and SQL, focusing on front-end, back-end, and database optimization while collaborating to meet company needs.",
+      mobileTitle: "Web Dev - KPN CORP",
+      mobileDescription:
+        "Developed web apps using Laravel, JavaScript, and SQL.",
       issued: "Jul 24 - Present",
       link: "https://example.com/certificate1",
     },
@@ -128,13 +145,20 @@ export const CertificationsSection = () => {
       title: "UI/UX Apprentice",
       description:
         "Designed logos, icons, wireframes, and web layouts using Figma and Illustrator, including real-world projects like the Mamikos job portal app to enhance recruitment tools.",
+      mobileTitle: "UI/UX Apprentice",
+      mobileDescription:
+        "Designed logos, icons, and web layouts with Figma and Illustrator.",
       issued: "Aug 23 - Jan 24",
       link: "https://example.com/certificate2",
     },
     {
       imageUrl: pkmLogo,
       title: "PKM-PM - Team Leader",
-      description: "Recipient of the PKM-PM funding stage from DIKTI for the development of DeafLearn, a mobile game designed to support learning for deaf children.",
+      description:
+        "Recipient of the PKM-PM funding stage from DIKTI for the development of DeafLearn, a mobile game designed to support learning for deaf children.",
+      mobileTitle: "Team Leader PKM-PM",
+      mobileDescription:
+        "Led DeafLearn project for DIKTI, supporting learning for deaf children.",
       issued: "Jun 23 - Jan 24",
       link: "https://example.com/certificate2",
     },
@@ -143,6 +167,9 @@ export const CertificationsSection = () => {
       title: "Assistant Lectures",
       description:
         "Taught Programming Fundamentals, Database Design Practicum, and Database System Practicum to classes of 40-50 students each, providing hands-on guidance and expertise in PHP, CSS, Java, JavaScript, and MySQL.",
+      mobileTitle: "Assistant Lecturer",
+      mobileDescription:
+        "Taught programming and database design to students in PHP, Java, and MySQL.",
       issued: "Aug 22 - Feb 24",
       link: "https://example.com/certificate2",
     },
@@ -151,11 +178,15 @@ export const CertificationsSection = () => {
       title: "IT Faculty Lab Part-Time Worker",
       description:
         "Serving as a part-time worker in the Information Technology Faculty lab, supporting various IT functions and assisting students in a dynamic academic environment.",
+      mobileTitle: "FTI Lab Part Time Worker",
+      mobileDescription:
+        "Assisted students and supported IT functions in the faculty lab.",
       issued: "Apr 23 - Sep 23",
       link: "https://example.com/certificate2",
     },
   ];
 
+  const isMobile = window.innerWidth < 768;
   return (
     <section
       className="certificates-section"
@@ -177,7 +208,7 @@ export const CertificationsSection = () => {
                     active={activeTab === "experience"}
                     onClick={() => setActiveTab("experience")}
                   >
-                    Experience
+                    {isMobile ? "Exp" : "Experience"}
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
@@ -185,7 +216,7 @@ export const CertificationsSection = () => {
                     active={activeTab === "certifications"}
                     onClick={() => setActiveTab("certifications")}
                   >
-                    Certification
+                    {isMobile ? "Certif" : "Certificates"}
                   </Nav.Link>
                 </Nav.Item>
               </Nav>
