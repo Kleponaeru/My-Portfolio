@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/My-Portfolio/static/css/main.7c0298f6.css",
-    "main.js": "/My-Portfolio/static/js/main.7b4d2ddb.js",
-    "static/js/453.acca0757.chunk.js": "/My-Portfolio/static/js/453.acca0757.chunk.js",
+    "main.js": "/My-Portfolio/static/js/main.bcb0703c.js",
+    "static/js/453.41811d64.chunk.js": "/My-Portfolio/static/js/453.41811d64.chunk.js",
     "static/media/Purple-Space.png": "/My-Portfolio/static/media/Purple-Space.9935b66392793bba8bd5.png",
     "static/media/sword-heart.png": "/My-Portfolio/static/media/sword-heart.855c56ee29d93489aa51.png",
     "static/media/fa-solid-900.ttf": "/My-Portfolio/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
@@ -18,12 +18,14 @@
     "static/media/CentraNo2-Bold.ttf": "/My-Portfolio/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
     "static/media/CentraNo2-Medium.ttf": "/My-Portfolio/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
     "static/media/CentraNo2-Book.ttf": "/My-Portfolio/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/navicat.png": "/My-Portfolio/static/media/navicat.7af2f784551e5a62741f.png",
     "static/media/microservices.png": "/My-Portfolio/static/media/microservices.34546cb0a235c7c35d75.png",
     "static/media/fa-regular-400.ttf": "/My-Portfolio/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
     "static/media/andr-studio.png": "/My-Portfolio/static/media/andr-studio.6598af1808f46abc49c1.png",
     "static/media/git-icon.png": "/My-Portfolio/static/media/git-icon.8322c082f223fd807d36.png",
     "static/media/python-logo.png": "/My-Portfolio/static/media/python-logo.5e4707bb04be435dace2.png",
     "static/media/dikti.png": "/My-Portfolio/static/media/dikti.e7e59348196c3092b8e2.png",
+    "static/media/node-js.png": "/My-Portfolio/static/media/node-js.52f31f229726cc6c3109.png",
     "static/media/kpn-logo.png": "/My-Portfolio/static/media/kpn-logo.5887f1684d595fa0f7cd.png",
     "static/media/Laravel.svg.png": "/My-Portfolio/static/media/Laravel.svg.19d9675c2afa35cd0830.png",
     "static/media/github.jpg": "/My-Portfolio/static/media/github.baba434c60a387d17dd8.jpg",
@@ -40,6 +42,7 @@
     "static/media/5968363.png": "/My-Portfolio/static/media/5968363.3c1690537d43b101774e.png",
     "static/media/php.png": "/My-Portfolio/static/media/php.d9fcf54cca347876e9d6.png",
     "static/media/fa-v4compatibility.ttf": "/My-Portfolio/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
+    "static/media/tailwind.jpg": "/My-Portfolio/static/media/tailwind.358eb35819a113cf5820.jpg",
     "static/media/jslogo.png": "/My-Portfolio/static/media/jslogo.266bd9fb2663dcc057b4.png",
     "static/media/fa-v4compatibility.woff2": "/My-Portfolio/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "static/media/nav-icon3.svg": "/My-Portfolio/static/media/nav-icon3.08b285abb8e118b52637efa5d65c5367.svg",
@@ -50,11 +53,11 @@
     "static/media/logo-ly.svg": "/My-Portfolio/static/media/logo-ly.5e7f94a63112b600e47b6da7ed34584a.svg",
     "static/media/nav-icon2.svg": "/My-Portfolio/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
     "main.7c0298f6.css.map": "/My-Portfolio/static/css/main.7c0298f6.css.map",
-    "main.7b4d2ddb.js.map": "/My-Portfolio/static/js/main.7b4d2ddb.js.map",
-    "453.acca0757.chunk.js.map": "/My-Portfolio/static/js/453.acca0757.chunk.js.map"
+    "main.bcb0703c.js.map": "/My-Portfolio/static/js/main.bcb0703c.js.map",
+    "453.41811d64.chunk.js.map": "/My-Portfolio/static/js/453.41811d64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c0298f6.css",
-    "static/js/main.7b4d2ddb.js"
+    "static/js/main.bcb0703c.js"
   ]
 }
