@@ -20,6 +20,9 @@ import gitHubLogo from "../assets/img/github.jpg";
 import xamppLogo from "../assets/img/XAMPP_Logo.png";
 import figmaLogo from "../assets/img/figma.png";
 import androidStdLogo from "../assets/img/andr-studio.png";
+import tailWindLogo from "../assets/img/tailwind.jpg";
+import nodeLogo from "../assets/img/node-js.png";
+import navicatLogo from "../assets/img/navicat.png";
 
 export const Skills = () => {
   const [activeTab, setActiveTab] = useState("tech");
@@ -32,12 +35,14 @@ export const Skills = () => {
     { name: "React JS", icon: reactLogo, level: "Intermediate" },
     { name: "MySQL", icon: mySqlLogo, level: "Advanced" },
     { name: "PHP", icon: phpLogo, level: "Advanced" },
-    { name: "Bootstrap", icon: bootstrapLogo, level: "Advanced" },
     { name: "Java", icon: javaLogo, level: "Advanced" },
     { name: "Python", icon: pythonLogo, level: "Advanced" },
     { name: "C++", icon: cplusLogo, level: "Advanced" },
     { name: "HTML", icon: htmlLogo, level: "Advanced" },
     { name: "CSS", icon: cssLogo, level: "Intermediate" },
+    { name: "Bootstrap", icon: bootstrapLogo, level: "Advanced" },
+    { name: "Tailwind", icon: tailWindLogo, level: "Intermediate" },
+    { name: "Node JS", icon: nodeLogo, level: "Intermediate" },
   ];
 
   const toolItems = [
@@ -47,6 +52,7 @@ export const Skills = () => {
     { name: "XAMPP", icon: xamppLogo, level: "Advanced" },
     { name: "Figma", icon: figmaLogo, level: "Advanced" },
     { name: "Android Studio", icon: androidStdLogo, level: "Intermediate" },
+    { name: "Navicat", icon: navicatLogo, level: "Intermediate" },
     // Add more tool items...
   ];
 
