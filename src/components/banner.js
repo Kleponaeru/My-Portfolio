@@ -95,7 +95,7 @@ export const Banner = () => {
             </Row>
             <Row>
               <p>
-                Undergraduate Information Systems student at{" "}
+                Bachelor's Degree in Information Systems from{" "}
                 <b>Universitas Kristen Duta Wacana</b>, I'm passionate about{" "}
                 <b>Web Development, BackEnd, Databases, and UI/UX Design</b>.
                 I'm also a <b>Fullstack Web Developer at KPN CORP</b>, {" "}
