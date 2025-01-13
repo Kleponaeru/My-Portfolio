@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/My-Portfolio/static/css/main.1d92d6df.css",
-    "main.js": "/My-Portfolio/static/js/main.0c24fc5b.js",
+    "main.js": "/My-Portfolio/static/js/main.7f77eea1.js",
     "static/js/453.41811d64.chunk.js": "/My-Portfolio/static/js/453.41811d64.chunk.js",
     "static/media/Purple-Space.png": "/My-Portfolio/static/media/Purple-Space.9935b66392793bba8bd5.png",
     "static/media/sword-heart.png": "/My-Portfolio/static/media/sword-heart.855c56ee29d93489aa51.png",
     "static/media/fa-solid-900.ttf": "/My-Portfolio/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/Ukrida-Logo.png": "/My-Portfolio/static/media/Ukrida-Logo.ef8ba3bac47f0e7e693d.png",
     "static/media/heart-bg.png": "/My-Portfolio/static/media/heart-bg.a78fa93de142e0c80ef9.png",
     "static/media/vscode.png": "/My-Portfolio/static/media/vscode.6c1d8021c9f9d0d5f31c.png",
     "static/media/mobile-map.jpg": "/My-Portfolio/static/media/mobile-map.65e828f7cbd6cb78ad01.jpg",
@@ -53,11 +54,11 @@
     "static/media/logo-ly.svg": "/My-Portfolio/static/media/logo-ly.5e7f94a63112b600e47b6da7ed34584a.svg",
     "static/media/nav-icon2.svg": "/My-Portfolio/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
     "main.1d92d6df.css.map": "/My-Portfolio/static/css/main.1d92d6df.css.map",
-    "main.0c24fc5b.js.map": "/My-Portfolio/static/js/main.0c24fc5b.js.map",
+    "main.7f77eea1.js.map": "/My-Portfolio/static/js/main.7f77eea1.js.map",
     "453.41811d64.chunk.js.map": "/My-Portfolio/static/js/453.41811d64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d92d6df.css",
-    "static/js/main.0c24fc5b.js"
+    "static/js/main.7f77eea1.js"
   ]
 }
