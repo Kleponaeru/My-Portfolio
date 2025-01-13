@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TbExternalLink } from "react-icons/tb";
-import { Container, Row, Col, Nav } from "react-bootstrap";
+import { Container, Row, Col, Nav, Button } from "react-bootstrap";
 import useScrollAnimation from "./useScrollAnimation";
 import intuitLogo from "../assets/img/intuit.png";
 import codeCampLogo from "../assets/img/code-camp.png";
@@ -9,7 +9,11 @@ import kpnLogo from "../assets/img/kpn-logo.png";
 import ukdwLogo from "../assets/img/logo-ukdw.png";
 import mesLogo from "../assets/img/my-edu.webp";
 import pkmLogo from "../assets/img/dikti.png";
+import ukridaLogo from "../assets/img/Ukrida-Logo.png";
+import { IoMdArrowDropleftCircle } from "react-icons/io";
+import { IoMdArrowDroprightCircle } from "react-icons/io";
 
+const ITEMS_PER_PAGE = 4;
 const CertificateItem = ({ project, showLink }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
@@ -91,7 +95,9 @@ const CertificateItem = ({ project, showLink }) => {
 };
 
 export const CertificationsSection = () => {
-  const [activeTab, setActiveTab] = useState("experience"); // Default to experience
+  const [activeTab, setActiveTab] = useState("experience");
+  const [experiencePage, setExperiencePage] = useState(1);
+  const [certificationsPage, setCertificationsPage] = useState(1);
   const animationRef = useScrollAnimation();
 
   const certifData = [
@@ -152,6 +158,17 @@ export const CertificationsSection = () => {
       link: "https://example.com/certificate2",
     },
     {
+      imageUrl: ukridaLogo,
+      title: "Student Exchange Program",
+      description:
+        "Participated in a semester-long student exchange program in Digital Product Management.",
+      mobileTitle: "Student Exchange",
+      mobileDescription:
+        "Participated in a semester-long student exchange program in Digital Product Management.",
+      issued: "Aug 24 - Jan 25",
+      link: "https://example.com/certificate2",
+    },
+    {
       imageUrl: pkmLogo,
       title: "PKM-PM - Team Leader",
       description:
@@ -187,6 +204,38 @@ export const CertificationsSection = () => {
   ];
 
   const isMobile = window.innerWidth < 768;
+  const handlePageChange = (tab, direction) => {
+    if (tab === "experience") {
+      if (
+        direction === "next" &&
+        experiencePage < Math.ceil(experienceData.length / ITEMS_PER_PAGE)
+      ) {
+        setExperiencePage(experiencePage + 1);
+      } else if (direction === "prev" && experiencePage > 1) {
+        setExperiencePage(experiencePage - 1);
+      }
+    } else if (tab === "certifications") {
+      if (
+        direction === "next" &&
+        certificationsPage < Math.ceil(certifData.length / ITEMS_PER_PAGE)
+      ) {
+        setCertificationsPage(certificationsPage + 1);
+      } else if (direction === "prev" && certificationsPage > 1) {
+        setCertificationsPage(certificationsPage - 1);
+      }
+    }
+  };
+
+  const activeData = activeTab === "experience" ? experienceData : certifData;
+  const currentPage =
+    activeTab === "experience" ? experiencePage : certificationsPage;
+  const totalPages = Math.ceil(activeData.length / ITEMS_PER_PAGE);
+
+  const currentData = activeData.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
   return (
     <section
       className="certificates-section"
@@ -222,14 +271,14 @@ export const CertificationsSection = () => {
               </Nav>
               {activeTab === "experience" && (
                 <div className="experience-list">
-                  {experienceData.map((project, index) => (
+                  {currentData.map((project, index) => (
                     <CertificateItem key={index} project={project} />
                   ))}
                 </div>
               )}
               {activeTab === "certifications" && (
                 <div className="certificates-list">
-                  {certifData.map((project, index) => (
+                  {currentData.map((project, index) => (
                     <CertificateItem
                       key={index}
                       project={project}
@@ -238,6 +287,34 @@ export const CertificationsSection = () => {
                   ))}
                 </div>
               )}
+              <div className="pagination-controls text-center mt-4">
+                <span
+                  className={`page-control ${
+                    currentPage === 1 ? "disabled" : ""
+                  }`}
+                  onClick={() => handlePageChange(activeTab, "prev")}
+                  style={{
+                    cursor: currentPage > 1 ? "pointer" : "not-allowed",
+                    marginRight: "10px",
+                  }}
+                >
+                  {<IoMdArrowDropleftCircle size={20} />}
+                </span>
+                {` ${currentPage} of ${totalPages} `}
+                <span
+                  className={`page-control ${
+                    currentPage === totalPages ? "disabled" : ""
+                  }`}
+                  onClick={() => handlePageChange(activeTab, "next")}
+                  style={{
+                    cursor:
+                      currentPage < totalPages ? "pointer" : "not-allowed",
+                    marginLeft: "10px",
+                  }}
+                >
+                  {<IoMdArrowDroprightCircle size={20} />}
+                </span>
+              </div>
             </div>
           </Col>
         </Row>
