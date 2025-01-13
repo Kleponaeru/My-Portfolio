@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TbExternalLink } from "react-icons/tb";
-import { Container, Row, Col, Nav, Button } from "react-bootstrap";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 import useScrollAnimation from "./useScrollAnimation";
 import intuitLogo from "../assets/img/intuit.png";
 import codeCampLogo from "../assets/img/code-camp.png";
