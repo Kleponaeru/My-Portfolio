@@ -78,7 +78,7 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row class="align-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <span className="tagline">Welcome to my portfolio</span>
             <h1>{"Hi! I'm Kelvin Lie"} </h1>
@@ -105,7 +105,7 @@ export const Banner = () => {
                 projects.
               </p>
             </Row>
-            <button classname="cv" onClick={() => handleDownload()}>
+            <button className="cv" onClick={() => handleDownload()}>
               <u>See more in CV</u> <CloudDownloadFill size={25} />
             </button>
           </Col>
