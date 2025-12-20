@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import {
-  CloudDownload,
   CloudDownloadFill,
-  Download,
 } from "react-bootstrap-icons";
 import headerImg from "../assets/img/sword-heart.png";
 

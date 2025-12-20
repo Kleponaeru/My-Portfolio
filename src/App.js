@@ -9,7 +9,6 @@ import { Projects } from "./components/projects";
 import { Footer } from "./components/footer";
 import { Email } from "./components/email";
 import CursorFollower from "./components/mouse-track/tracking";
-import CustomScrollbar from "./components/CustomScrollbar";
 import { CertificationsSection } from "./components/certificationsSection";
 
 function App() {
