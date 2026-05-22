@@ -1,29 +1,8 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import { NavBar } from "./components/navbar";
-import { Banner } from "./components/banner";
-import { Skills } from "./components/skills";
-import { Projects } from "./components/projects";
-import { Footer } from "./components/footer";
-import { Email } from "./components/email";
-import CursorFollower from "./components/mouse-track/tracking";
-import { CertificationsSection } from "./components/certificationsSection";
+import { SiteLayout } from "./app/SiteLayout";
 
 function App() {
-  return (
-    <div className="App" style={{ cursor: "none" }}>
-      <NavBar></NavBar>
-      <Banner></Banner>
-      <Skills></Skills>
-      <CertificationsSection></CertificationsSection>
-      <Projects></Projects>
-      <Email></Email>
-      <Footer></Footer>
-      <CursorFollower></CursorFollower>
-    </div>
-  );
+  return <SiteLayout />;
 }
 
 export default App;
