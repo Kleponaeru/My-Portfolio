@@ -1,5 +1,6 @@
 import quintalLogo from "../assets/img/logo.svg";
 import ciputraLogo from "../assets/img/logo-ukdw.png";
+import kpnLogo from "../assets/img/kpn-logo.png";
 import ukridaLogo from "../assets/img/Ukrida-Logo.png";
 import reactLogo from "../assets/img/react.png";
 import laravelLogo from "../assets/img/Laravel.svg.png";
@@ -9,6 +10,15 @@ import jsLogo from "../assets/img/jslogo.png";
 import mySqlLogo from "../assets/img/5968363.png";
 import figmaLogo from "../assets/img/figma.png";
 import pythonLogo from "../assets/img/python-logo.png";
+import htmlLogo from "../assets/img/html.png";
+import cssLogo from "../assets/img/css-logo.svg";
+import bootstrapLogo from "../assets/img/bootsrap.png";
+import javaLogo from "../assets/img/java.png";
+import gitLogo from "../assets/img/git-icon.png";
+import navicatLogo from "../assets/img/navicat.png";
+import intuitLogo from "../assets/img/intuit.png";
+import adobeLogo from "../assets/img/adobe.png";
+import codeCampLogo from "../assets/img/code-camp.png";
 import cardEngineering from "../assets/img/coding-background.jpg";
 import cardWeb from "../assets/img/web-dev-2.jpg";
 import cardDesign from "../assets/img/ui-ux.jpg";
@@ -19,14 +29,14 @@ import instagramIcon from "../assets/img/nav-icon3.svg";
 
 export const siteMeta = {
   name: "Kelvin Lie",
-  title: "Software Engineer and Product-Minded Builder",
+  title: "Software Engineer",
   location: "Indonesia",
   email: "kelvinlie08@gmail.com",
   resumeFileName: "Kelvin Lie-resume.pdf",
   intro:
-    "I build practical web products with a strong bias toward maintainable frontend systems, backend reliability, and clean user flows.",
+    "I build web products with clean UI, solid backend structure, and practical database work.",
   summary:
-    "Currently focused on work at Quintal ID and updating this portfolio to better reflect production experience. Previously contributed to work for Ciputra Group, with earlier experience across UI design, internal tools, and academic technical roles.",
+    "I am currently working at Quintal ID and previously contributed to work for Ciputra Group and KPN CORP. This portfolio now reflects the work I want to represent clearly.",
   heroImage: heroArtwork,
   roles: [
     "Software Engineer",
@@ -62,6 +72,7 @@ export const navigationItems = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
+  { id: "certifications", label: "Certifications" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
@@ -70,69 +81,108 @@ export const navigationItems = [
 export const experienceItems = [
   {
     company: "Quintal ID",
-    role: "Current Role",
+    role: "Current",
     period: "Present",
     summary:
-      "Actively shipping product work and modernizing how this portfolio communicates current capabilities. Focus areas include frontend implementation, product iteration, and practical delivery quality.",
+      "Building product-facing work with focus on frontend implementation, iteration speed, and cleaner delivery quality.",
     highlights: [
-      "Working on live product needs instead of intern-era portfolio positioning.",
-      "Balancing UI implementation with maintainable engineering decisions.",
-      "Improving product communication, interaction quality, and delivery speed.",
+      "Shipping work for live product needs.",
+      "Balancing UI quality with maintainable code.",
+      "Improving clarity, interaction, and delivery speed.",
     ],
     accent: "current",
     logo: quintalLogo,
   },
   {
     company: "Ciputra Group",
-    role: "Past Work",
+    role: "Past",
     period: "Previous",
     summary:
-      "Delivered work aligned with enterprise expectations, contributing to business-facing software and sharpening execution in structured environments.",
+      "Contributed to business-facing work in a structured enterprise environment with stronger delivery expectations.",
     highlights: [
-      "Built experience operating within established business and stakeholder constraints.",
-      "Worked on production-oriented output rather than student-only projects.",
-      "Strengthened reliability, clarity, and cross-team communication.",
+      "Worked within real business and stakeholder constraints.",
+      "Focused on production-oriented output.",
+      "Improved reliability and communication.",
     ],
     accent: "past",
     logo: ciputraLogo,
   },
   {
-    company: "Broader Experience",
-    role: "Foundation",
+    company: "KPN CORP",
+    role: "Earlier",
     period: "Earlier",
     summary:
-      "Past experience spans UI/UX apprenticeship, teaching support, and student-led technical initiatives. Those roles remain valuable context, but the portfolio now prioritizes current and relevant work.",
+      "Built internal web applications and strengthened full-stack execution across frontend, backend, and database work.",
     highlights: [
-      "UI and design systems exposure through apprenticeship work.",
-      "Hands-on teaching and mentoring through assistant roles.",
-      "A practical blend of design, engineering, and communication.",
+      "Worked with Laravel, JavaScript, and SQL.",
+      "Handled full-stack implementation needs.",
+      "Gained practical experience from internal company tools.",
     ],
     accent: "base",
-    logo: ukridaLogo,
+    logo: kpnLogo,
+  },
+];
+
+export const certificationItems = [
+  {
+    title: "Intuit Design for Delight Innovator",
+    issuer: "Certiport",
+    issued: "September 2023",
+    description: "User-centered design and innovation thinking.",
+    logo: intuitLogo,
+    href: "https://www.certiport.com/portal/pages/credentialverification.aspx",
+  },
+  {
+    title: "Adobe Certified Associate",
+    issuer: "Adobe",
+    issued: "October 2023",
+    description: "Graphic design and illustration using Adobe Illustrator.",
+    logo: adobeLogo,
+    href: "https://www.certiport.com/portal/pages/credentialverification.aspx",
+  },
+  {
+    title: "Foundational C# with Microsoft",
+    issuer: "freeCodeCamp",
+    issued: "March 2024",
+    description: "Core C# fundamentals and object-oriented programming.",
+    logo: codeCampLogo,
+    href: "https://freecodecamp.org/certification/Kleponaeru/foundational-c-sharp-with-microsoft",
   },
 ];
 
 export const skillGroups = [
   {
     name: "Frontend",
+    description: "UI implementation, responsive layout, and visual structure.",
     items: [
       { name: "React", level: "Advanced", icon: reactLogo },
       { name: "JavaScript", level: "Advanced", icon: jsLogo },
+      { name: "HTML", level: "Advanced", icon: htmlLogo },
+      { name: "CSS", level: "Advanced", icon: cssLogo },
+      { name: "Bootstrap", level: "Advanced", icon: bootstrapLogo },
       { name: "Figma", level: "Advanced", icon: figmaLogo },
     ],
   },
   {
     name: "Backend",
+    description: "Application logic, APIs, and server-side implementation.",
     items: [
       { name: "Laravel", level: "Advanced", icon: laravelLogo },
       { name: "Node.js", level: "Intermediate", icon: nodeLogo },
       { name: "PHP", level: "Advanced", icon: phpLogo },
       { name: "Python", level: "Intermediate", icon: pythonLogo },
+      { name: "Java", level: "Intermediate", icon: javaLogo },
     ],
   },
   {
     name: "Data",
-    items: [{ name: "MySQL", level: "Advanced", icon: mySqlLogo }],
+    description: "Database work, tooling, and structured data handling.",
+    items: [
+      { name: "MySQL", level: "Advanced", icon: mySqlLogo },
+      { name: "Git", level: "Advanced", icon: gitLogo },
+      { name: "Navicat", level: "Intermediate", icon: navicatLogo },
+      { name: "Database Design", level: "Advanced", icon: ukridaLogo },
+    ],
   },
 ];
 
@@ -162,12 +212,6 @@ export const projectItems = [
   },
 ];
 
-export const aboutPoints = [
-  "I prefer shipping interfaces that are visually deliberate, not generic template work.",
-  "I care about structure as much as aesthetics, so content, sections, and reusable UI need to be easy to maintain.",
-  "This refresh keeps the portfolio lightweight while making the narrative more aligned with current professional work.",
-];
-
 export const contactLinks = [
   {
     label: "Email",
@@ -187,5 +231,3 @@ export const contactLinks = [
 ];
 
 export const footerText = "Copyright 2026 Kelvin Lie. All rights reserved.";
-
-export const supportingLogos = [ciputraLogo, ukridaLogo];

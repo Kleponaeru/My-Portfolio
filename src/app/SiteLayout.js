@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { ScrollProgress } from "../components/common/ScrollProgress";
+import { BackToTopButton } from "../components/common/BackToTopButton";
+import LiquidEther from "../components/common/LiquidEther";
 import { SiteHeader } from "./SiteHeader";
 import { HeroSection } from "../sections/HeroSection";
 import { AboutSection } from "../sections/AboutSection";
 import { ExperienceSection } from "../sections/ExperienceSection";
+import { CertificationsSection } from "../sections/CertificationsSection";
 import { SkillsSection } from "../sections/SkillsSection";
 import { ProjectsSection } from "../sections/ProjectsSection";
 import { ContactSection } from "../sections/ContactSection";
@@ -30,6 +33,31 @@ export const SiteLayout = () => {
 
   return (
     <div className="site-app">
+      <div className="site-liquid-background" aria-hidden="true">
+        <LiquidEther
+          className="site-liquid-canvas"
+          colors={
+            theme === "light"
+              ? ["#0f766e", "#d97706", "#34d399"]
+              : ["#34d399", "#f59e0b", "#0ea5e9"]
+          }
+          mouseForce={12}
+          cursorSize={72}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={20}
+          iterationsPoisson={20}
+          resolution={0.35}
+          isBounce={false}
+          autoDemo
+          autoSpeed={0.35}
+          autoIntensity={1.65}
+          takeoverDuration={0.25}
+          autoResumeDelay={2200}
+          autoRampDuration={0.7}
+          style={{ width: "100%", height: "100%" }}
+        />
+      </div>
       <SiteHeader
         theme={theme}
         onToggleTheme={() =>
@@ -43,11 +71,13 @@ export const SiteLayout = () => {
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
+        <CertificationsSection />
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />
       </main>
       <SiteFooter />
+      <BackToTopButton />
     </div>
   );
 };

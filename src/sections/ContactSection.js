@@ -7,8 +7,8 @@ export const ContactSection = () => (
     <div className="section-shell">
       <SectionHeading
         eyebrow="Contact"
-        title="Open to product, engineering, and collaboration conversations"
-        description="The old email form added third-party runtime dependencies and failure points. This version keeps contact simple, direct, and fast."
+        title="Contact Me"
+        description="Simple and direct ways to reach me."
       />
 
       <div className="contact-panel">

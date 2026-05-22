@@ -7,8 +7,8 @@ export const SkillsSection = () => (
     <div className="section-shell">
       <SectionHeading
         eyebrow="Skills"
-        title="Tools chosen for delivery, not decoration"
-        description="The stack reflects the kind of work this portfolio should now present: product-facing UI, backend implementation, and practical database work."
+        title="My Skills"
+        description="Frontend, backend, and data tools I use the most."
       />
 
       <div className="skill-groups">
@@ -16,6 +16,8 @@ export const SkillsSection = () => (
           <Reveal key={group.name} className="skill-group" delay={index * 70}>
             <div className="skill-group-heading">
               <p>{group.name}</p>
+              <h3>{group.name}</h3>
+              <span>{group.description}</span>
             </div>
             <div className="skill-list">
               {group.items.map((item) => (

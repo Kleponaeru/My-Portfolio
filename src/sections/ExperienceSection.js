@@ -7,8 +7,8 @@ export const ExperienceSection = () => (
     <div className="section-shell">
       <SectionHeading
         eyebrow="Experience"
-        title="Current and relevant work first"
-        description="The emphasis is now on current work at Quintal ID and previous work tied to Ciputra Group, with older context kept as supporting background instead of the main story."
+        title="My Experience"
+        description="Here are the main roles and companies I want to highlight."
       />
 
       <div className="experience-grid">

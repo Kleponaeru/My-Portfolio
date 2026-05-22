@@ -1,3 +1,5 @@
+import { FiMoon, FiSun } from "react-icons/fi";
+
 export const ThemeToggle = ({ theme, onToggle }) => (
   <button
     type="button"
@@ -5,6 +7,6 @@ export const ThemeToggle = ({ theme, onToggle }) => (
     onClick={onToggle}
     aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
   >
-    <span>{theme === "dark" ? "Light" : "Dark"}</span>
+    {theme === "dark" ? <FiSun /> : <FiMoon />}
   </button>
 );

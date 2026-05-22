@@ -7,8 +7,8 @@ export const ProjectsSection = () => (
     <div className="section-shell">
       <SectionHeading
         eyebrow="Projects"
-        title="Selected work and representative builds"
-        description="A mix of portfolio work and public repositories that best represent how I approach implementation, structure, and product presentation."
+        title="My Projects"
+        description="A few selected projects and representative builds."
       />
 
       <div className="project-grid">
