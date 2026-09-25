@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/My-Portfolio/static/css/main.26733249.css",
-    "main.js": "/My-Portfolio/static/js/main.fc0ecdf5.js",
+    "main.js": "/My-Portfolio/static/js/main.cb0a481a.js",
     "static/media/hero-artwork.png": "/My-Portfolio/static/media/hero-artwork.855c56ee29d93489aa51.png",
     "static/media/software-engineering.jpg": "/My-Portfolio/static/media/software-engineering.a0b4f3e040c85ba92b26.jpg",
     "static/media/portfolio-refresh.jpg": "/My-Portfolio/static/media/portfolio-refresh.d2dfea70755ea250f80c.jpg",
@@ -31,10 +31,10 @@
     "static/media/css-logo.svg": "/My-Portfolio/static/media/css-logo.541200b174db976480edcedb73d25268.svg",
     "static/media/linkedin-logo.svg": "/My-Portfolio/static/media/linkedin-logo.721d5414c26365f117e71d46b6641cb2.svg",
     "main.26733249.css.map": "/My-Portfolio/static/css/main.26733249.css.map",
-    "main.fc0ecdf5.js.map": "/My-Portfolio/static/js/main.fc0ecdf5.js.map"
+    "main.cb0a481a.js.map": "/My-Portfolio/static/js/main.cb0a481a.js.map"
   },
   "entrypoints": [
     "static/css/main.26733249.css",
-    "static/js/main.fc0ecdf5.js"
+    "static/js/main.cb0a481a.js"
   ]
 }
