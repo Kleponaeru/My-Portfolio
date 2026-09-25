@@ -18,6 +18,7 @@ import navicatLogo from "../assets/images/skills/navicat-logo.png";
 import intuitLogo from "../assets/images/skills/intuit-logo.png";
 import adobeLogo from "../assets/images/skills/adobe-logo.png";
 import codeCampLogo from "../assets/images/skills/code-camp-logo.png";
+import pbaLogo from "../assets/images/skills/pba-logo.jpg";
 import dbDesignIcon from "../assets/images/skills/db-design.png";
 import cardEngineering from "../assets/images/projects/software-engineering.jpg";
 import cardWeb from "../assets/images/projects/web-engineering.jpg";
@@ -124,6 +125,15 @@ export const experienceItems = [
 ];
 
 export const certificationItems = [
+  {
+    title: "Blockchain Developer Bootcamp",
+    issuer: "Pelita Bangsa Academy",
+    issued: "Jan 2026",
+    description:
+      "Program topics: blockchain fundamentals; Solidity from basics to advanced; smart contract testing and security; gas optimization and Yul; DeFi, NFTs, and DAOs; and frontend integration and DeFi engineering.",
+    logo: pbaLogo,
+    href: "https://www.linkedin.com/in/klvnlie08/overlay/Position/2725851088/treasury/?profileId=ACoAADv7WQ8BCgXv7xN55LXKmAgu7W68KHAF9Sw",
+  },
   {
     title: "Intuit Design for Delight Innovator",
     issuer: "Certiport",
