@@ -38,17 +38,6 @@ export const SiteHeader = ({ theme, onToggleTheme }) => {
           </span>
         </a>
 
-        <button
-          type="button"
-          className="mobile-menu-toggle"
-          onClick={() => setIsMenuOpen((open) => !open)}
-          aria-expanded={isMenuOpen}
-          aria-controls="primary-navigation"
-          aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
-        >
-          {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-
         <nav
           id="primary-navigation"
           className={`site-nav${isMenuOpen ? " is-open" : ""}`}
@@ -72,6 +61,16 @@ export const SiteHeader = ({ theme, onToggleTheme }) => {
         <div className="site-header-actions">
           <SocialLinks links={siteMeta.socialLinks} className="header-socials" />
           <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+          <button
+            type="button"
+            className="mobile-menu-toggle"
+            onClick={() => setIsMenuOpen((open) => !open)}
+            aria-expanded={isMenuOpen}
+            aria-controls="primary-navigation"
+            aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </div>
     </header>

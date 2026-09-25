@@ -1,7 +1,6 @@
 import quintalLogo from "../assets/images/companies/quintal-logo.png";
 import ciputraLogo from "../assets/images/companies/ciputra-logo.png";
 import kpnLogo from "../assets/images/companies/kpn-logo.png";
-import ukridaLogo from "../assets/images/skills/ukrida-logo.png";
 import reactLogo from "../assets/images/skills/react-logo.png";
 import laravelLogo from "../assets/images/skills/laravel-logo.png";
 import nodeLogo from "../assets/images/skills/node-js-logo.png";
@@ -19,6 +18,7 @@ import navicatLogo from "../assets/images/skills/navicat-logo.png";
 import intuitLogo from "../assets/images/skills/intuit-logo.png";
 import adobeLogo from "../assets/images/skills/adobe-logo.png";
 import codeCampLogo from "../assets/images/skills/code-camp-logo.png";
+import dbDesignIcon from "../assets/images/skills/db-design.png";
 import cardEngineering from "../assets/images/projects/software-engineering.jpg";
 import cardWeb from "../assets/images/projects/web-engineering.jpg";
 import cardDesign from "../assets/images/projects/portfolio-refresh.jpg";
@@ -181,7 +181,7 @@ export const skillGroups = [
       { name: "MySQL", level: "Advanced", icon: mySqlLogo },
       { name: "Git", level: "Advanced", icon: gitLogo },
       { name: "Navicat", level: "Intermediate", icon: navicatLogo },
-      { name: "Database Design", level: "Advanced", icon: ukridaLogo },
+      { name: "Database Design", level: "Advanced", icon: dbDesignIcon },
     ],
   },
 ];
