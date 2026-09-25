@@ -1,6 +1,7 @@
 import { contactLinks } from "../data/portfolio";
 import { SectionHeading } from "../components/common/SectionHeading";
 import { Reveal } from "../components/common/Reveal";
+import { ArrowUpRight, Mail } from "lucide-react";
 
 export const ContactSection = () => (
   <section className="content-section" id="contact">
@@ -13,8 +14,8 @@ export const ContactSection = () => (
 
       <div className="contact-panel">
         <Reveal className="contact-card">
-          <p className="contact-card-kicker">Best way to reach me</p>
-          <h3>Email or LinkedIn works best for direct opportunities.</h3>
+          <p className="contact-card-kicker"><Mail size={15} /> Best way to reach me</p>
+          <h3>Have a good idea? Let&apos;s make it feel real.</h3>
           <p>
             If the work needs product thinking, frontend implementation, or a
             more structured portfolio-level UI, that is the range this site is now optimized to represent.
@@ -26,7 +27,7 @@ export const ContactSection = () => (
               <span>{item.label}</span>
               <strong>{item.value}</strong>
               <a href={item.href} target="_blank" rel="noreferrer">
-                Open
+                Open <ArrowUpRight size={15} />
               </a>
             </Reveal>
           ))}

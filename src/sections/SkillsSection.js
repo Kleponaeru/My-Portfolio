@@ -1,6 +1,7 @@
 import { skillGroups } from "../data/portfolio";
 import { SectionHeading } from "../components/common/SectionHeading";
 import { Reveal } from "../components/common/Reveal";
+import { Check } from "lucide-react";
 
 export const SkillsSection = () => (
   <section className="content-section" id="skills">
@@ -15,7 +16,7 @@ export const SkillsSection = () => (
         {skillGroups.map((group, index) => (
           <Reveal key={group.name} className="skill-group" delay={index * 70}>
             <div className="skill-group-heading">
-              <p>{group.name}</p>
+              <p><span className="skill-group-number">0{index + 1}</span> {group.name}</p>
               <h3>{group.name}</h3>
               <span>{group.description}</span>
             </div>
@@ -25,7 +26,7 @@ export const SkillsSection = () => (
                   <img src={item.icon} alt="" />
                   <div>
                     <strong>{item.name}</strong>
-                    <span>{item.level}</span>
+                    <span><Check size={13} /> {item.level}</span>
                   </div>
                 </div>
               ))}

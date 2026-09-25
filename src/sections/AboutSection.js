@@ -1,6 +1,7 @@
 import { siteMeta } from "../data/portfolio";
 import { SectionHeading } from "../components/common/SectionHeading";
 import { Reveal } from "../components/common/Reveal";
+import { ArrowUpRight, Layers3, WandSparkles } from "lucide-react";
 
 export const AboutSection = () => (
   <section className="content-section" id="about">
@@ -12,13 +13,14 @@ export const AboutSection = () => (
       />
 
       <div className="about-grid">
-        <Reveal className="about-card">
+        <Reveal className="about-card about-card-copy">
           <p className="about-lead">{siteMeta.title}</p>
+          <h3>Engineering with a designer&apos;s eye.</h3>
           <p>{siteMeta.summary}</p>
           <div className="about-mini-highlights">
-            <span>Current work at Quintal ID</span>
-            <span>Past work for Ciputra Group</span>
-            <span>Earlier experience at KPN CORP</span>
+            <span><Layers3 size={15} /> Product thinking</span>
+            <span><WandSparkles size={15} /> Visual polish</span>
+            <span><ArrowUpRight size={15} /> Full-stack range</span>
           </div>
         </Reveal>
 
@@ -29,9 +31,9 @@ export const AboutSection = () => (
             <span>Data</span>
           </div>
           <div className="about-visual-copy">
-            <p>Current Focus</p>
-            <h3>Clean product UI with practical engineering underneath.</h3>
-            <span>Move across the page to activate the background effect.</span>
+            <p>Working philosophy</p>
+            <h3>Good interfaces feel obvious, alive, and considered.</h3>
+            <span>From first interaction to final detail, I care about how the work feels to use.</span>
           </div>
         </Reveal>
       </div>

@@ -1,6 +1,7 @@
 import { certificationItems } from "../data/portfolio";
 import { SectionHeading } from "../components/common/SectionHeading";
 import { Reveal } from "../components/common/Reveal";
+import { ArrowUpRight } from "lucide-react";
 
 export const CertificationsSection = () => (
   <section className="content-section" id="certifications">
@@ -24,7 +25,7 @@ export const CertificationsSection = () => (
             <span className="certification-date">{item.issued}</span>
             <p>{item.description}</p>
             <a href={item.href} target="_blank" rel="noreferrer">
-              View credential
+              View credential <ArrowUpRight size={16} />
             </a>
           </Reveal>
         ))}

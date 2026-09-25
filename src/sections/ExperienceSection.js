@@ -1,6 +1,7 @@
 import { experienceItems } from "../data/portfolio";
 import { SectionHeading } from "../components/common/SectionHeading";
 import { Reveal } from "../components/common/Reveal";
+import { ArrowUpRight } from "lucide-react";
 
 export const ExperienceSection = () => (
   <section className="content-section" id="experience">
@@ -18,6 +19,7 @@ export const ExperienceSection = () => (
             className={`experience-card experience-card-${item.accent}`}
             delay={index * 70}
           >
+            <div className="experience-index">0{index + 1}</div>
             <div className="experience-meta">
               <img src={item.logo} alt="" />
               <div>
@@ -32,6 +34,7 @@ export const ExperienceSection = () => (
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
+            <span className="experience-arrow" aria-hidden="true"><ArrowUpRight size={18} /></span>
           </Reveal>
         ))}
       </div>
