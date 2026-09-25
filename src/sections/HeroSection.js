@@ -15,7 +15,7 @@ export const HeroSection = () => {
             <span className="availability-pill"><span /> Thoughtful work, made useful</span>
             <span className="hero-location"><MapPin size={14} /> {siteMeta.location}</span>
           </div>
-          <p className="hero-kicker">Portfolio / 2026</p>
+          <p className="hero-kicker">Portfolio</p>
           <h1>Building <em>useful</em> digital experiences.</h1>
           <p className="hero-role">
             <span className="role-label">Currently shaping:</span>

@@ -1129,9 +1129,9 @@ section[id] {
   --text: #17211f;
   --muted: #596762;
   --muted-strong: #34443e;
-  --accent: #a6f36b;
-  --accent-strong: #8bda52;
-  --accent-ink: #172315;
+  --accent: #3b742f;
+  --accent-strong: #326528;
+  --accent-ink: #ffffff;
   --highlight: #ff755d;
   --shadow: 0 24px 70px rgba(30, 43, 37, 0.09);
   --surface-gradient: #f4f2ec;
@@ -1167,9 +1167,9 @@ section[id] {
   --text: #17211f;
   --muted: #596762;
   --muted-strong: #34443e;
-  --accent: #a6f36b;
-  --accent-strong: #8bda52;
-  --accent-ink: #172315;
+  --accent: #3b742f;
+  --accent-strong: #326528;
+  --accent-ink: #ffffff;
   --highlight: #ff755d;
   --shadow: 0 24px 70px rgba(30, 43, 37, 0.09);
   --surface-gradient: #f4f2ec;
@@ -1255,7 +1255,7 @@ section[id] { scroll-margin-top: 112px; }
   max-width: 11ch; margin: 15px 0 19px; font: 600 clamp(3.6rem, 7.2vw, 6.5rem)/0.92 var(--font-display);
   letter-spacing: -0.075em;
 }
-.hero-copy h1 em { color: #84c94e; font-style: normal; }
+.hero-copy h1 em { color: var(--accent); font-style: normal; }
 [data-theme="dark"] .hero-copy h1 em { color: var(--accent); }
 .hero-role { display: flex; align-items: center; gap: 8px; margin: 0 0 19px; min-height: 32px; color: var(--muted-strong); font-size: 0.98rem; }
 .role-label { color: var(--muted); font-size: 0.8rem; }
@@ -1267,7 +1267,7 @@ section[id] { scroll-margin-top: 112px; }
   transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 .button-primary { background: var(--accent); color: var(--accent-ink); }
-.button-primary:hover { transform: translateY(-2px); background: #c6ff95; box-shadow: 0 10px 24px rgba(129, 198, 83, 0.2); }
+.button-primary:hover { transform: translateY(-2px); background: var(--accent-strong); color: var(--accent-ink); box-shadow: 0 10px 24px rgba(129, 198, 83, 0.2); }
 .button-secondary, .project-content a, .contact-link-card a { border-color: var(--border); background: var(--bg-strong); color: var(--text); }
 .button-secondary:hover, .project-content a:hover, .contact-link-card a:hover { transform: translateY(-2px); border-color: var(--accent-strong); background: var(--panel); }
 .hero-social-row { display: flex; align-items: center; justify-content: space-between; max-width: 395px; }
