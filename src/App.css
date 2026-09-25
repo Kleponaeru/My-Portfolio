@@ -1379,8 +1379,9 @@ section[id] { scroll-margin-top: 112px; }
 .project-content { padding: 19px; }
 .project-tags { gap: 6px; margin-bottom: 13px; }
 .project-tags span { padding: 5px 8px; border-radius: 6px; font-size: 0.65rem; }
-.project-content h3 { min-height: 2.5em; }
-.project-content p { font-size: 0.79rem; line-height: 1.65; }
+.project-tags .project-status { background: color-mix(in srgb, var(--accent) 16%, var(--panel)); color: var(--accent-strong); font-weight: 700; }
+.project-content h3 { min-height: 0; }
+.project-content p { margin: 9px 0; font-size: 0.79rem; line-height: 1.65; }
 .project-content a { min-height: 38px; padding: 0 11px; border-radius: 8px; font-size: 0.72rem; }
 .project-note { font-size: 0.7rem; }
 

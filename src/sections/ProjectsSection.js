@@ -9,7 +9,7 @@ export const ProjectsSection = () => (
       <SectionHeading
         eyebrow="Projects"
         title="My Projects"
-        description="A few selected projects and representative builds."
+        description="A mix of live products and the internal app I’m currently building at Quintal."
       />
 
       <div className="project-grid">
@@ -27,15 +27,16 @@ export const ProjectsSection = () => (
                 {project.tags.map((tag) => (
                   <span key={tag}>{tag}</span>
                 ))}
+                {project.status ? <span className="project-status">{project.status}</span> : null}
               </div>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               {project.href ? (
                 <a href={project.href} target="_blank" rel="noreferrer">
-                  Open reference <ArrowUpRight size={16} />
+                  Open project <ArrowUpRight size={16} />
                 </a>
               ) : (
-                <span className="project-note">Integrated into this portfolio refresh</span>
+                <span className="project-note">{project.note}</span>
               )}
             </div>
           </Reveal>

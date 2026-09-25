@@ -3,6 +3,7 @@ import ciputraLogo from "../assets/images/companies/ciputra-logo.png";
 import kpnLogo from "../assets/images/companies/kpn-logo.png";
 import reactLogo from "../assets/images/skills/react-logo.png";
 import laravelLogo from "../assets/images/skills/laravel-logo.png";
+import djangoLogo from "../assets/images/skills/django-logo.png";
 import nodeLogo from "../assets/images/skills/node-js-logo.png";
 import phpLogo from "../assets/images/skills/php-logo.png";
 import jsLogo from "../assets/images/skills/javascript-logo.png";
@@ -181,6 +182,7 @@ export const skillGroups = [
       { name: "Node.js", level: "Intermediate", icon: nodeLogo },
       { name: "PHP", level: "Advanced", icon: phpLogo },
       { name: "Python", level: "Intermediate", icon: pythonLogo },
+      { name: "Django", level: "Advanced", icon: djangoLogo },
       { name: "Java", level: "Intermediate", icon: javaLogo },
     ],
   },
@@ -198,27 +200,29 @@ export const skillGroups = [
 
 export const projectItems = [
   {
-    title: "Production-Focused Portfolio Refresh",
+    title: "Ponflix",
     description:
-      "A redesign and restructuring of this portfolio so the content reflects current work at Quintal ID and past work for Ciputra Group instead of intern-era positioning.",
-    image: cardDesign,
-    tags: ["React", "IA", "Performance"],
-  },
-  {
-    title: "Web Engineering Experiments",
-    description:
-      "A collection of implementation work across frontend, backend, and full-stack problem solving using practical web stacks.",
+      "An anime and manga platform for streaming anime and reading manga, manhwa, and manhua.",
     image: cardWeb,
-    tags: ["Laravel", "PHP", "Bootstrap"],
-    href: "https://github.com/Kleponaeru/Web-Based-Programming-Practicum",
+    tags: ["Anime", "Manga", "Streaming"],
+    href: "https://ponflix.vercel.app/",
   },
   {
-    title: "Software Engineering Work",
+    title: "Portfoly Tracker",
     description:
-      "Repository work centered on software architecture, implementation discipline, and building maintainable solutions.",
+      "A crypto portfolio tracking dashboard inspired by CoinMarketCap.",
     image: cardEngineering,
-    tags: ["Architecture", "Full Stack", "Systems"],
-    href: "https://github.com/Kleponaeru/Software-Engineering",
+    tags: ["Crypto", "Portfolio Tracker", "Dashboard"],
+    href: "https://portfoly-tracker.vercel.app/dashboard",
+  },
+  {
+    title: "Quintal Internal App",
+    description:
+      "Active internal application development at Quintal, built with Django.",
+    image: cardDesign,
+    tags: ["Django", "Internal App"],
+    status: "Active",
+    note: "Internal development project",
   },
 ];
 
