@@ -208,12 +208,12 @@ export const projectItems = [
     href: "https://ponflix.vercel.app/",
   },
   {
-    title: "Portfoly Tracker",
+    title: "PonCoins - Coin & Portfolio Tracker",
     description:
       "A crypto portfolio tracking dashboard inspired by CoinMarketCap.",
     image: cardEngineering,
     tags: ["Crypto", "Portfolio Tracker", "Dashboard"],
-    href: "https://portfoly-tracker.vercel.app/dashboard",
+    href: "https://poncoins.vercel.app/dashboard",
   },
   {
     title: "Quintal Internal App",
